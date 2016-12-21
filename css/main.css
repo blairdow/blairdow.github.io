@@ -1,0 +1,134 @@
+* {
+    font-family: 'Lato', cursive;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/*
+font-family: 'Coda', cursive;
+font-family: 'Fugaz One', cursive;
+font-family: 'Bungee Shade', cursive;
+*/
+
+h1 {
+    font-family: 'Fugaz One', cursive;
+    color: rgba(255, 255, 255, 0.1);
+    letter-spacing: 10px;
+}
+
+a.brand-logo {
+    font-family: 'Fugaz One', cursive;
+    color: rgba(255, 255, 255, 0.69);
+    letter-spacing: 5px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+span.title{
+    font-size: .5em;
+    color: rgba(255, 255, 255, 0.15);
+}
+
+.nav a {
+    font-family: 'Fugaz One', cursive;
+    letter-spacing: 2px;
+    
+}
+
+.white-text {
+    color: rgba(255, 255, 255, 0.69);
+}
+
+.project-info p {
+    color: rgba(255, 255, 255, 0.69);
+    font-size: 1.5em;
+    margin: 0;
+}
+
+p.jeopardy {
+    font-size: 1.25em;
+    margin-top: 5px
+}
+
+.nav-button {
+    transition: box-shadow 0.5s ease-out, 
+                text-shadow 0.5s ease-out;
+    color: rgba(255, 255, 255, 0.69);
+}
+
+.nav-button:hover {
+    text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.46);
+    box-shadow: 0px 0px 15px black;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.project-image {
+    position: relative;
+}
+
+.project-info {
+    padding: 15px 0 2px;
+}
+
+.project-card {
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.09);
+    transition: box-shadow 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.project-card:hover {
+    box-shadow: 0px 0px 15px #0f0f0f;
+}
+
+.hover {
+    opacity: 0;
+}
+
+.project-card:hover .hover {
+    opacity: 1;
+}
+
+.hover:not(hover) {
+    animation-delay: 1s;
+    transition: opacity 1s ease-out;
+    opacity: 0;
+}
+
+.project-techs {
+    color: rgba(255, 255, 255, 0.7);
+    background: linear-gradient(to top, #546e7a, rgba(84, 110, 122, 0.51) 90%, rgba(84, 110, 122, 0));
+/*    background-color: #546e7a;*/
+    position: absolute;
+    width: 100%;
+    padding: 15px 0 0 0;
+    bottom: 4px;
+}
+
+.rounded {
+    border-radius: 8px;
+}
+
+.rounded-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.container {
+    width: 90%;
+}
+
+.dot {
+    color: rgba(255, 255, 255, 0.32);
+}
+
+.section {
+    height: 100vh;
+}
+
+#work {
+    padding-top: 0;
+}
