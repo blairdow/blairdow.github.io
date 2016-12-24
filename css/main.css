@@ -93,19 +93,22 @@ p.jeopardy {
 }
 
 .hover:not(hover) {
-    animation-delay: 1s;
-    transition: opacity 1s ease-out;
+    animation-delay: 0.5s;
+    transition: opacity 0.5s ease-out;
     opacity: 0;
 }
 
 .project-techs {
     color: rgba(255, 255, 255, 0.7);
-    background: linear-gradient(to top, #546e7a, rgba(84, 110, 122, 0.51) 90%, rgba(84, 110, 122, 0));
+    background-color: #aa00ff;
+/*    background: linear-gradient(to top, #aa00ff, rgba(170, 0, 255, 0.5) 90%, rgba(170, 0, 255, 0));*/
+    
+/*    background: linear-gradient(to top, #546e7a, rgba(84, 110, 122, 0.51) 90%, rgba(84, 110, 122, 0)); */
 /*    background-color: #546e7a;*/
     position: absolute;
     width: 100%;
-    padding: 15px 0 0 0;
-    bottom: 4px;
+    padding: 10px;
+    bottom: -10px;
 }
 
 .rounded {
@@ -131,4 +134,63 @@ p.jeopardy {
 
 #work {
     padding-top: 0;
+}
+
+.about-text {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.about-intro {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/*BLINKING CURSOR*/
+.typed-cursor{
+    color: rgba(255, 255, 255, 0.35);
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+/*CONTACT SECTION*/
+#contact {
+    position: relative;
+}
+
+.contact-block {
+    margin-top: 15vh; 
+}
+
+.contact-icon {
+    font-size: 4em;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.25s ease-out;
+}
+
+.contact-block:hover .contact-icon, .contact-block:active .contact-icon {
+    color: #aa00ff;
+}
+
+.contact-title {
+    color: rgba(255, 255, 255, 0.12);
+}
+
+.contact-info {
+    color: rgba(255, 255, 255, 0.7);
 }

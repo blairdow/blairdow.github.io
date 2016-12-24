@@ -41,12 +41,15 @@
 <!--BODY CONTAINER-->
 <main> 
 <div class="container">
+   
+<!--TITLE - HIDDEN ON LARGE SCREENS-->
     <div class="center"><h4><span class='title hide-on-med-and-up'>FULL STACK DEV</span></h4></div>
     
     <div class='center hide-on-med-and-up'>
         <span class="dot">&bull; &bull; &bull; </span>
     </div>
-     
+
+<!--WORK SECTION-->
       <div id="work" class='section'>
        <h1 class='center'>WORK</h1>
         <div class="row">
@@ -104,24 +107,61 @@
             </div> 
         </div> 
     </div>
-    
-    <div class='center'>
+
+<!--about trigger calls waypoint function-->
+    <div class='center' id='about-trigger'>
         <span class="dot">&bull; &bull; &bull; </span>
     </div>
     
+<!--ABOUT SECTION-->
     <div id="about" class='section'>
         <h1 class='center'>ABOUT</h1>
-        <div class="row"></div>
+        <div class="row">
+            <div class="col s12">
+            
+            <!--typed headline-->
+               <div id="typed-strings" style='display:none;'>
+                    <h3>Hi there! ^1000 I’m Blair. ^2000 <br>You may be wondering how I ended up as a full stack developer… </h3>
+                </div>
+                
+                <h3><span id="typed" class='about-intro purple accent-4'></span></h3>
+                
+<!--button says "not really, give me the tldr;-->
+    <!--graphic designer/social media marketing > dev bootcamp > full stack dev-->
+<!--button to see full story-->
+                <p class='flow-text about-text'>I studied Art History in undergrad, and eventually became a graphic designer and social media professional in the fashion industry in DTLA. I was always interested in coding, ever since I started tinkering around with HTML and CSS back in the Myspace days. I took some intro Computer Science classes in college, and early last year I started seriously teaching myself how to build websites. I focused mostly on HTML, CSS, JS/jQuery and responsive design techniques, with a little bit of PHP as well.</p>
+
+                <p class='flow-text about-text'>Eventually, I felt that I would benefit from a more structured learning environment, and I was ready to quit my job and take the leap into developing! I settled on General Assembly’s 12 week long <a href="https://generalassemb.ly/education/web-development-immersive" class='purple accent-4 grey-text'>Web Development Immersive bootcamp</a>, which I completed in December 2016. We learned web dev basics, Ruby on Rails, as well as the full MEAN stack. For my last project I taught myself the Ionic mobile framework, and built a mobile app called FluffMates. </p>
+
+                <p class='flow-text about-text'>Coding combines my loves of good design, building things, being creative, solving problems, and drinking way too much coffee in ways I never imagined! I can’t wait to find my home on a dev team near you. I’m also available for freelance or contract work remotely, or in the LA area. I love DTLA and would be especially stoked to find a position in my neighborhood. </p>
+<!--               </div>-->
+<!--               <span id='typed'></span>-->
+            </div>
+        </div>
     </div>
     
     <div class='center'>
         <span class="dot">&bull; &bull; &bull; </span>
     </div>
-    
+
+<!--contact section-->
     <div id="contact" class='section'>
         <h1 class='center'>CONTACT</h1>
         <div class="row">
-            
+            <div class="col s12 l4 center contact-block">
+                <a href="mailto:blairdow@gmail.com"><i class="ion-ios-compose-outline contact-icon"></i>
+                <h4 class='contact-title'>EMAIL</h4><p class='contact-info'>blairdow@gmail.com</p></a>
+            </div>
+            <div class="col s12 l4 center contact-block">
+                <i class="ion-iphone contact-icon"></i>
+                <h4 class="contact-title">PHONE</h4>
+                <p class='contact-info'>707.337.8033</p>
+            </div>
+            <div class="col s12 l4 center contact-block">
+                <a href="https://github.com/blairdow"><i class="ion-social-github-outline contact-icon"></i>
+                <h4 class="contact-title">GITHUB</h4><p class='contact-info'>github.com/blairdow</p></a>
+                
+            </div>
         </div>
     </div>
     
@@ -141,6 +181,10 @@
       src="https://code.jquery.com/jquery-2.2.4.js"
       integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
       crossorigin="anonymous"></script>
+    <!--ANIMATED TYPING-->
+    <script src="js/typed.js"></script>
+    <!--WAYPOINTS JS-->
+    <script src='js/waypoints.min.js'></script>
     <!--MATERIALIZE CSS  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <!--MAIN SCRIPT-->
