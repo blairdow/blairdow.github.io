@@ -21,18 +21,21 @@
           FULL STACK DEV
       </span></a>
       
+<!--MOBILE NAV hamburger button-->
       <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="ion-navicon-round"></i></a>
-      
+
+<!--FULL SCREEN NAV BAR-->
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li class='nav'><a class="nav-button waves-effect waves-lighten btn purple accent-4" href="#">WORK</a></li>
-        <li class='nav'><a class="nav-button waves-effect waves-lighten btn purple accent-4" href="#">ABOUT</a></li>
-        <li class='nav'><a class="nav-button waves-effect waves-lighten btn purple accent-4" href="#">CONTACT</a></li>
+        <li class='nav js--scroll-to-work'><a class="nav-button waves-effect waves-lighten btn purple accent-4" href="#work">WORK</a></li>
+        <li class='nav js--scroll-to-about'><a class="nav-button waves-effect waves-lighten btn purple accent-4" href="#about">ABOUT</a></li>
+        <li class='nav js--scroll-to-contact'><a class="nav-button waves-effect waves-lighten btn purple accent-4" href="#contact">CONTACT</a></li>
       </ul>
-      
+
+<!--MOBILE SIDE NAV      -->
       <ul class="side-nav blue-grey darken-1" id="mobile-demo">
-        <li class='nav'><a class="nav-button waves-effect waves-lighten btn purple accent-4" href="#">WORK</a></li>
-        <li class='nav'><a class="nav-button waves-effect waves-lighten btn purple accent-4" href="#">ABOUT</a></li>
-        <li class='nav'><a class="nav-button waves-effect waves-lighten btn purple accent-4" href="#">CONTACT</a></li>
+        <li class='nav js--scroll-to-work'><a class="nav-button waves-effect waves-lighten btn purple accent-4" href="#work">WORK</a></li>
+        <li class='nav js--scroll-to-about'><a class="nav-button waves-effect waves-lighten btn purple accent-4" href="#about">ABOUT</a></li>
+        <li class='nav js--scroll-to-contact'><a class="nav-button waves-effect waves-lighten btn purple accent-4" href="#contact">CONTACT</a></li>
       </ul>
     </div>
   </nav>
@@ -50,38 +53,42 @@
     </div>
 
 <!--WORK SECTION-->
-      <div id="work" class='section'>
+    <div id="work" class='section js--section-work'>
        <h1 class='center'>WORK</h1>
         <div class="row">
             <div class="col s12 l3">
                 <div class="rounded project-card blue-grey darken-1">
-                    <div class="project-image inline-block center">
-                        <img class='rounded-top responsive-img' src="assets/blairsnake.jpg" alt="blair snake image">
-                        <div class="hover project-techs center">
-                            HTML<span class="dot"> &bull; </span>CSS<span class="dot"> &bull; </span>JAVASCRIPT
+                    <a href="https://blairdow.github.io/blair-snake/">
+                        <div class="project-image center">
+                                <img class='rounded-top responsive-img' src="assets/blairsnake.jpg" alt="blair snake image">
+                                <div class="hover project-techs center">
+                                    HTML<span class="dot"> &bull; </span>CSS<span class="dot"> &bull; </span>JAVASCRIPT
+                                </div>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <p class='center'>BlairSnake</p>
-                    </div>
+                        <div class="project-info">
+                            <p class='center'>BlairSnake</p>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="col s12 l3">
                 <div class="rounded project-card blue-grey darken-1">
-                    <div class="project-image inline-block center">
-                        <img class='rounded-top responsive-img' src="assets/spotify-overview.jpg" alt="music alert image">
-                        <div class="hover project-techs center">
-                            RUBY ON RAILS<span class="dot"> &bull; </span>ERB
+                    <a href="http://ec2-54-183-65-59.us-west-1.compute.amazonaws.com:3000/">
+                        <div class="project-image center">
+                            <img class='rounded-top responsive-img' src="assets/spotify-overview.jpg" alt="music alert image">
+                            <div class="hover project-techs center">
+                                RUBY ON RAILS<span class="dot"> &bull; </span>ERB
+                            </div>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <p class='center'>Music Alert</p>
-                    </div>
+                        <div class="project-info">
+                            <p class='center'>Music Alert</p>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="col s12 l3">
                 <div class="rounded project-card blue-grey darken-1">
-                    <div class="project-image inline-block center">
+                    <div class="project-image center">
                         <img class='rounded-top responsive-img' src="assets/trebek_homepage.jpg" alt="jeopardy image">
                         <div class="hover project-techs center">
                             NODE.JS<span class="dot"> &bull; </span>SOCKET.IO<span class="dot"> &bull; </span>MATERIALIZE CSS
@@ -94,7 +101,7 @@
             </div>
             <div class="col s12 l3">
                 <div class="rounded project-card blue-grey darken-1">
-                    <div class="project-image inline-block center">
+                    <div class="project-image center">
                         <img class='rounded-top responsive-img' src="assets/egg.jpeg" alt="music alert image">
                         <div class="hover project-techs center">
                             IONIC MOBILE<span class="dot"> &bull; </span>NODE.JS<span class="dot"> &bull; </span>ANGULAR
@@ -114,28 +121,45 @@
     </div>
     
 <!--ABOUT SECTION-->
-    <div id="about" class='section'>
+    <div id="about" class='section js--section-about'>
         <h1 class='center'>ABOUT</h1>
         <div class="row">
             <div class="col s12">
             
-            <!--typed headline-->
+        <!--typed headline-->
                <div id="typed-strings" style='display:none;'>
                     <h3>Hi there! ^1000 I’m Blair. ^2000 <br>You may be wondering how I ended up as a full stack developer… </h3>
                 </div>
-                
-                <h3><span id="typed" class='about-intro purple accent-4'></span></h3>
-                
-<!--button says "not really, give me the tldr;-->
-    <!--graphic designer/social media marketing > dev bootcamp > full stack dev-->
-<!--button to see full story-->
-                <p class='flow-text about-text'>I studied Art History in undergrad, and eventually became a graphic designer and social media professional in the fashion industry in DTLA. I was always interested in coding, ever since I started tinkering around with HTML and CSS back in the Myspace days. I took some intro Computer Science classes in college, and early last year I started seriously teaching myself how to build websites. I focused mostly on HTML, CSS, JS/jQuery and responsive design techniques, with a little bit of PHP as well.</p>
+                <h3 class='center'><span id="typed" class='about-intro purple accent-4'></span></h3>
+            </div>
+        </div> 
+        <div class="row bio-buttons" style='display:none;'>
+            <div class="col s6">
+                <div class="short-bio-button card-panel rounded about-card blue-grey darken-1 center">not really, give me the tl;dr.</div>
+            </div>    
+            <div class="col s6">
+               <div class="long-bio-button card-panel rounded about-card blue-grey darken-1 center">yes! give me the long version.</div>
+            </div>    
+        </div>   
+    <!--SHORT BIO-->
+        <div class="row">
+           <div class="col s12">
+                <div id="short-bio" style='display:none;' class='center'>
+                    <p class='flow-text short-bio'>GRAPHIC DESIGNER > DEV BOOTCAMP > FULL STACK DEV</p>
+                </div>
+           </div>
+        </div>
+        
+    <!--LONG BIO-->
+        <div class="row">
+            <div class="col s12">
+                <div id="long-bio" style='display:none;'>
+                    <p class='flow-text about-text'>I studied Art History and Business at UCSD, and eventually became a <span class='purple accent-4 grey-text lighten-3'>graphic designer and social media professional</span> in the fashion industry in DTLA. I was always interested in coding, ever since I started tinkering around with HTML and CSS back in the Myspace days. I took some Computer Science classes in college, and early last year I started teaching myself how to build websites. I focused mostly on <span class='purple accent-4 grey-text lighten-3'>HTML, CSS, JS/jQuery and responsive design techniques</span> , with a little bit of PHP as well.</p>
 
-                <p class='flow-text about-text'>Eventually, I felt that I would benefit from a more structured learning environment, and I was ready to quit my job and take the leap into developing! I settled on General Assembly’s 12 week long <a href="https://generalassemb.ly/education/web-development-immersive" class='purple accent-4 grey-text'>Web Development Immersive bootcamp</a>, which I completed in December 2016. We learned web dev basics, Ruby on Rails, as well as the full MEAN stack. For my last project I taught myself the Ionic mobile framework, and built a mobile app called FluffMates. </p>
+                    <p class='flow-text about-text'>Eventually, I felt that I would benefit from a more structured learning environment, and I was ready to take the leap into developing! I settled on General Assembly’s 12 week long <a href="https://generalassemb.ly/education/web-development-immersive" class='purple accent-4 grey-text lighten-3'>Web Development Immersive bootcamp</a>, which I completed in December 2016. We learned the full MEAN stack, and Ruby on Rails. And for my final project I taught myself the Ionic mobile framework, and built a mobile app using the PetFinder API. </p>
 
-                <p class='flow-text about-text'>Coding combines my loves of good design, building things, being creative, solving problems, and drinking way too much coffee in ways I never imagined! I can’t wait to find my home on a dev team near you. I’m also available for freelance or contract work remotely, or in the LA area. I love DTLA and would be especially stoked to find a position in my neighborhood. </p>
-<!--               </div>-->
-<!--               <span id='typed'></span>-->
+                    <p class='flow-text about-text'>Coding combines my love for good design, building things, being creative, solving problems, and drinking way too much coffee in ways I never imagined! I can’t wait to find my home on a dev team near you. I’m also available for freelance or contract work remotely, or in the LA area. </p>
+                </div>
             </div>
         </div>
     </div>
@@ -145,7 +169,7 @@
     </div>
 
 <!--contact section-->
-    <div id="contact" class='section'>
+    <div id="contact" class='section js--section-contact'>
         <h1 class='center'>CONTACT</h1>
         <div class="row">
             <div class="col s12 l4 center contact-block">

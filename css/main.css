@@ -10,12 +10,25 @@ font-family: 'Fugaz One', cursive;
 font-family: 'Bungee Shade', cursive;
 */
 
+.container {
+    width: 90%;
+}
+
 h1 {
     font-family: 'Fugaz One', cursive;
     color: rgba(255, 255, 255, 0.1);
     letter-spacing: 10px;
 }
 
+.dot {
+    color: rgba(255, 255, 255, 0.32);
+}
+
+.section {
+    height: 100vh;
+}
+
+/*NAV BAR*/
 a.brand-logo {
     font-family: 'Fugaz One', cursive;
     color: rgba(255, 255, 255, 0.69);
@@ -35,21 +48,6 @@ span.title{
     
 }
 
-.white-text {
-    color: rgba(255, 255, 255, 0.69);
-}
-
-.project-info p {
-    color: rgba(255, 255, 255, 0.69);
-    font-size: 1.5em;
-    margin: 0;
-}
-
-p.jeopardy {
-    font-size: 1.25em;
-    margin-top: 5px
-}
-
 .nav-button {
     transition: box-shadow 0.5s ease-out, 
                 text-shadow 0.5s ease-out;
@@ -61,8 +59,20 @@ p.jeopardy {
     box-shadow: 0px 0px 15px black;
 }
 
-.inline-block {
-    display: inline-block;
+/*WORK SECTION*/
+#work {
+    padding-top: 0;
+}
+
+.project-info p {
+    color: rgba(255, 255, 255, 0.69);
+    font-size: 1.5em;
+    margin: 0;
+}
+
+p.jeopardy {
+    font-size: 1.25em;
+    margin-top: 5px
 }
 
 .project-image {
@@ -101,10 +111,6 @@ p.jeopardy {
 .project-techs {
     color: rgba(255, 255, 255, 0.7);
     background-color: #aa00ff;
-/*    background: linear-gradient(to top, #aa00ff, rgba(170, 0, 255, 0.5) 90%, rgba(170, 0, 255, 0));*/
-    
-/*    background: linear-gradient(to top, #546e7a, rgba(84, 110, 122, 0.51) 90%, rgba(84, 110, 122, 0)); */
-/*    background-color: #546e7a;*/
     position: absolute;
     width: 100%;
     padding: 10px;
@@ -120,28 +126,29 @@ p.jeopardy {
     border-top-right-radius: 8px;
 }
 
-.container {
-    width: 90%;
+/*ABOUT SECTION*/
+.about-intro {
+    color: rgba(255, 255, 255, 0.85);
 }
 
-.dot {
-    color: rgba(255, 255, 255, 0.32);
+.about-card {
+    color: rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.09);
+    transition: box-shadow 0.5s;
+    transition-timing-function: ease-out;
 }
 
-.section {
-    height: 100vh;
-}
-
-#work {
-    padding-top: 0;
+.about-card:hover {
+    box-shadow: 0px 0px 5px 0px #0f0f0f;
 }
 
 .about-text {
     color: rgba(255, 255, 255, 0.35);
 }
 
-.about-intro {
-    color: rgba(255, 255, 255, 0.85);
+#short-bio, #long-bio {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /*BLINKING CURSOR*/
