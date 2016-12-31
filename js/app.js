@@ -1,46 +1,89 @@
 $(function(){   
     console.log('loaded')
     
-    //side navigation for nav bar on mobile
+//side navigation for nav bar on mobile
     $(".button-collapse").sideNav({
         closeOnClick: true
     });
     
-    //scroll animation from nav
-    $('.js--scroll-to-work').on('click', function(){
-        $('html, body').animate({
-            scrollTop: $('.js--section-work').offset().top}, 1000)
+//function to start typing animation in About section
+    function startTyping(){
+        $("#typed").typed({
+            stringsElement: $('#typed-strings'),
+            typeSpeed: 15,
+            callback: function(){
+                $('.bio-buttons').fadeIn(4000)
+            }
+        });
+    }
+    
+//open and close from sidenav
+    $('.js--mobile-work-open').on('click', function(){
+        $('#about').hide()
+        $('#contact').hide()
+        
+        $('#work').show()
     })    
     
-    $('.js--scroll-to-about').on('click', function(){
-        $('html, body').animate({
-            scrollTop: $('.js--section-about').offset().top}, 1000)
+    $('.js--mobile-about-open').on('click', function(){
+        $('#work').hide()
+        $('#contact').hide()
+        
+        $('#about').show(400, function(){
+            //add typing if typing hasnt already happened
+            if(!($('#typed').text())){
+                startTyping()
+            }
+        })
+    })    
+    
+    $('.js--mobile-contact-open').on('click', function(){
+        $('#work').hide()
+        $('#about').hide()
+        
+        $('#contact').show()
     })
     
-    $('.js--scroll-to-contact').on('click', function(){
-        $('html, body').animate({
-            scrollTop: $('.js--section-contact').offset().top}, 1000)
+//slide animation from full screen nav
+    $('.js--work-slide').on('click', function(){
+        $('#about').hide()
+        $('#contact').hide()
+        
+        $('#work').slideDown('slow')
+    })    
+    
+    $('.js--about-slide').on('click', function(){
+        $('#work').hide()
+        $('#contact').hide()
+        
+        $('#about').slideDown('slow', function(){
+            //add typing if typing hasnt already happened
+            if(!($('#typed').text())){
+                startTyping()
+            }
+        })
+    })
+    
+    $('.js--contact-slide').on('click', function(){
+        $('#work').hide()
+        $('#about').hide()
+        
+        $('#contact').slideDown('slow')
     })
     
     //typing in about section starts when scrolled to
-    var waypoint = new Waypoint({
-      element: $('#about-trigger'),
-      handler: function(direction) {
-        if(direction == 'down'){
-            $("#typed").typed({
-                stringsElement: $('#typed-strings'),
-                typeSpeed: 15,
-                callback: function(){
-                    $('.bio-buttons').fadeIn(4000)
-                }
-            });
-            this.destroy()
-        }
-      },
-      offset: 50
-    })
+//    var waypoint = new Waypoint({
+//      element: $('.about-trigger'),
+//      handler: function(direction) {
+//        if(direction == 'down'){
+//            
+//            this.destroy()
+//        }
+//      },
+//      offset: 50
+//    })
     
-    //buttons to fade in/out short bio and long bio
+//buttons to fade in/out short bio and long bio
     $('.short-bio-button').on('click', function(){
         $('#long-bio').fadeOut(1000)
         $('#short-bio').fadeIn(2000)

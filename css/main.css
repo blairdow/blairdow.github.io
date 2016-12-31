@@ -25,7 +25,7 @@ h1 {
 }
 
 .section {
-    height: 100vh;
+    height: 100%;
 }
 
 /*NAV BAR*/
@@ -45,7 +45,6 @@ span.title{
 .nav a {
     font-family: 'Fugaz One', cursive;
     letter-spacing: 2px;
-    
 }
 
 .nav-button {
@@ -57,6 +56,10 @@ span.title{
 .nav-button:hover {
     text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.46);
     box-shadow: 0px 0px 15px black;
+}
+
+#sidenav-overlay {
+    z-index: 0;
 }
 
 /*WORK SECTION*/

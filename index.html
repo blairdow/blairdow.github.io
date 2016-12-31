@@ -15,7 +15,7 @@
  
 <header>
 
-<!-- <div class="navbar-fixed">-->
+<div class="navbar-fixed">
   <!--NAV   -->
   <nav class="blue-grey darken-1">
     <div class="nav-wrapper">
@@ -26,31 +26,24 @@
 <!--MOBILE NAV hamburger button-->
       <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="ion-navicon-round"></i></a>
 
-<!--FULL SCREEN NAV BAR-->
-<!--
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li class='nav js--scroll-to-work'><a class="nav-button btn purple accent-4" href="#work">WORK</a></li>
-        <li class='nav js--scroll-to-about'><a class="nav-button btn purple accent-4" href="#about">ABOUT</a></li>
-        <li class='nav js--scroll-to-contact'><a class="nav-button btn purple accent-4" href="#contact">CONTACT</a></li>
-      </ul>
--->
-
-    <ul class="tabs">
-        <li class="tab"><a href="#work">work</a></li>
-        <li class="tab"><a href="#about">about</a></li>
-        <li class="tab"><a href="#contact">contact</a></li>
-    </ul>
-    
 <!--MOBILE SIDE NAV      -->
       <ul class="side-nav blue-grey darken-1" id="mobile-demo">
-        <li class='nav js--scroll-to-work'><a class="nav-button btn purple accent-4" href="#work">WORK</a></li>
-        <li class='nav js--scroll-to-about'><a class="nav-button btn purple accent-4" href="#about">ABOUT</a></li>
-        <li class='nav js--scroll-to-contact'><a class="nav-button btn purple accent-4" href="#contact">CONTACT</a></li>
+        <li class='nav js--mobile-work-open'><a class="nav-button btn purple accent-4">WORK</a></li>
+        <li class='nav js--mobile-about-open'><a class="nav-button btn purple accent-4" href="#">ABOUT</a></li>
+        <li class='nav js--mobile-contact-open'><a class="nav-button btn purple accent-4" href="#">CONTACT</a></li>
       </ul>
+      
+<!--FULL SCREEN NAV BAR-->
+      <ul class="right hide-on-med-and-down">
+        <li class='nav js--work-slide'><a class="nav-button btn purple accent-4" href="#">WORK</a></li>
+        <li class='nav js--about-slide'><a class="nav-button btn purple accent-4" href="#">ABOUT</a></li>
+        <li class='nav js--contact-slide'><a class="nav-button btn purple accent-4" href="#">CONTACT</a></li>
+      </ul>
+
     </div>
   </nav>
      
-<!-- </div>-->
+</div>
 </header>
   
 <!--BODY CONTAINER-->
@@ -59,13 +52,9 @@
    
 <!--TITLE - HIDDEN ON LARGE SCREENS-->
     <div class="center"><h4><span class='title hide-on-med-and-up'>FULL STACK DEV</span></h4></div>
-    
-    <div class='center hide-on-med-and-up'>
-        <span class="dot">&bull; &bull; &bull; </span>
-    </div>
 
 <!--WORK SECTION-->
-    <div id="work" class='section js--section-work'>
+    <div id="work" class='section js--section-work' style='display:initial;'>
        <h1 class='center'>WORK</h1>
         <div class="row">
             <div class="col s12 l3">
@@ -128,16 +117,18 @@
     </div>
 
 <!--about trigger calls waypoint function-->
+<!--
     <div class='center' id='about-trigger'>
         <span class="dot">&bull; &bull; &bull; </span>
     </div>
+-->
     
 <!--ABOUT SECTION-->
-    <div id="about" class='section js--section-about'>
+    <div id="about" class='section js--section-about about-trigger' style='display:none;'>
         <h1 class='center'>ABOUT</h1>
         <div class="row">
             <div class="col s12">
-            
+
         <!--typed headline-->
                <div id="typed-strings" style='display:none;'>
                     <h3>Hi there! ^1000 I’m Blair. ^2000 <br>You may be wondering how I ended up as a full stack developer… </h3>
@@ -171,17 +162,18 @@
                     <p class='flow-text about-text'>Eventually, I felt that I would benefit from a more structured learning environment, and I was ready to take the leap into developing! I settled on General Assembly’s 12 week long <a href="https://generalassemb.ly/education/web-development-immersive" class='purple accent-4 grey-text lighten-3'>Web Development Immersive bootcamp</a>, which I completed in December 2016. We learned the full MEAN stack, and Ruby on Rails. And for my final project I taught myself the Ionic mobile framework, and built a mobile app using the PetFinder API. </p>
 
                     <p class='flow-text about-text'>Coding combines my love for good design, building things, being creative, solving problems, and drinking way too much coffee in ways I never imagined! I can’t wait to find my home on a dev team near you. I’m also available for freelance or contract work remotely, or in the LA area. </p>
+                    
+                    <div class='center'>
+                        <span class="dot">&bull; &bull; &bull; </span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     
-    <div class='center'>
-        <span class="dot">&bull; &bull; &bull; </span>
-    </div>
 
 <!--contact section-->
-    <div id="contact" class='section js--section-contact'>
+    <div id="contact" class='section js--section-contact' style='display:none;'>
         <h1 class='center'>CONTACT</h1>
         <div class="row">
             <div class="col s12 l4 center contact-block">
