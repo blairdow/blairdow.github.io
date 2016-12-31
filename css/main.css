@@ -1,7 +1,8 @@
-* {
+body {
     font-family: 'Lato', cursive;
     font-weight: 300;
     letter-spacing: 0.5px;
+    font-size: 16px;
 }
 
 /*
@@ -24,6 +25,10 @@ h1 {
     color: rgba(255, 255, 255, 0.32);
 }
 
+.mobile-dot {
+    display: none;
+}
+
 .section {
     height: 100%;
 }
@@ -37,9 +42,14 @@ a.brand-logo {
     margin-left: 20px;
 }
 
-span.title{
+span.title, span.mobile-title {
     font-size: .5em;
     color: rgba(255, 255, 255, 0.15);
+}
+
+    /*title hidden on large screens*/
+span.mobile-title {
+    display: none;
 }
 
 .nav a {
@@ -204,5 +214,106 @@ p.jeopardy {
 .contact-info {
     color: rgba(255, 255, 255, 0.7);
 }
+
+/*MEDIA QUERIES*/
+    
+    /*iphone*/
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) { 
+    body, h1 {
+        font-size: 4em;
+    }
+    
+    /*NAV BAR*/
+    a.brand-logo {
+        font-family: 'Fugaz One', cursive;
+        color: rgba(255, 255, 255, 0.69);
+        letter-spacing: 5px;
+        display: inline-block;
+        text-align: center;
+    }
+    
+    span.title {
+        display: none;
+    }
+    
+    span.mobile-title {
+        display: block;
+        font-size: 2em;
+        margin: 150px 0 30px 0;
+        color: rgba(255, 255, 255, 0.3);
+    }
+    
+    .mobile-dot {
+        display: block;
+        color: rgba(255, 255, 255, 0.1);
+        font-size: .5em;
+    }
+    
+    a.brand-logo {
+        font-size: 2em;
+        margin-top: 50px;
+    }
+    
+    nav {
+        height: 150px;
+    }
+    
+    .ion-navicon-round {
+        font-size: 2em;
+        margin: 20px 20px 0 0;
+        color: rgba(255, 255, 255, 0.69);
+    }
+    
+    /*SIDENAV*/
+    .side-nav {
+        width: 75%;    
+    }
+    
+    .side-nav a.btn {
+        height: 20vh;
+        margin: 5%;
+        text-align: center;
+        padding-top: 20%;
+    }
+    
+    .nav a {
+        display: block;
+        font-size: 2em;
+    }
+
+    .nav-button {
+        color: rgba(255, 255, 255, 0.69);
+        
+    }
+    
+    /*WORK SECTION*/
+    .hover {
+        opacity: 1;
+    }
+    
+    .hover:not(hover) {
+        opacity: 1;
+    }
+    
+
+}
+
+/*
+.hover {
+    opacity: 0;
+}
+
+.project-card:hover .hover {
+    opacity: 1;
+}
+
+.hover:not(hover) {
+    animation-delay: 0.5s;
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+}
+*/
 
 
