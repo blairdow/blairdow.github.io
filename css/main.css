@@ -296,24 +296,9 @@ and (max-device-width : 667px) {
     .hover:not(hover) {
         opacity: 1;
     }
-    
 
 }
 
-/*
-.hover {
-    opacity: 0;
-}
 
-.project-card:hover .hover {
-    opacity: 1;
-}
-
-.hover:not(hover) {
-    animation-delay: 0.5s;
-    transition: opacity 0.5s ease-out;
-    opacity: 0;
-}
-*/
 
 
