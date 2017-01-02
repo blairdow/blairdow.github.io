@@ -43,7 +43,9 @@ a.brand-logo {
 }
 
 span.title, span.mobile-title {
-    font-size: .5em;
+    font-family: 'Lato', cursive;
+    font-size: .75em;
+    letter-spacing: 2px;
     color: rgba(255, 255, 255, 0.15);
 }
 
@@ -221,8 +223,12 @@ p.jeopardy {
 @media only screen 
 and (min-device-width : 375px) 
 and (max-device-width : 667px) { 
-    body, h1 {
+    body {
         font-size: 4em;
+    }
+    
+    h1 {
+        font-size: 3em;
     }
     
     /*NAV BAR*/
@@ -295,6 +301,32 @@ and (max-device-width : 667px) {
     
     .hover:not(hover) {
         opacity: 1;
+    }
+    
+    /*ABOUT SECTION*/
+    .about-intro {
+        font-size: 2em;
+        line-height: normal;
+    }
+    
+    .short-bio, .about-text {
+        font-size: 1em;
+    }
+    
+    /*CONTACT SECTION*/
+    .contact-icon {
+        color: #a0f;
+    }
+    
+    .contact-title {
+        font-size: 2em;
+    }
+    
+    .contact-block {
+        margin: 0 50px 20px 50px;
+        border: 2px white solid;
+        border-radius: 20px;
+/*        background-color: #546e7a;*/
     }
 
 }
