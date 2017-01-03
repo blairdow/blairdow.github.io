@@ -141,6 +141,20 @@ p.jeopardy {
     border-top-right-radius: 8px;
 }
 
+.project-desc {
+    color: rgba(255, 255, 255, 0.69); 
+    padding: 5%;
+    
+}
+
+.project-desc p {
+    font-size: 1.25em;
+}
+
+.built-with {
+    color: rgba(255, 255, 255, 0.2);
+}
+
 /*ABOUT SECTION*/
 .about-intro {
     color: rgba(255, 255, 255, 0.85);
