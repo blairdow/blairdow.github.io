@@ -39,7 +39,14 @@ a.brand-logo {
     color: rgba(255, 255, 255, 0.69);
     letter-spacing: 5px;
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 75px;
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 50px;
+    margin-top: 7px;
+    margin-left: 10px;
 }
 
 span.title, span.mobile-title {
@@ -155,7 +162,19 @@ p.jeopardy {
     color: rgba(255, 255, 255, 0.2);
 }
 
+.skills-list {
+    color: rgba(255, 255, 255, 0.69); 
+}
+
+.skill-title {
+    color: rgba(255, 255, 255, 0.2);
+}
+
 /*ABOUT SECTION*/
+#about {
+    min-height: 100vh;
+}
+
 .about-intro {
     color: rgba(255, 255, 255, 0.85);
 }
@@ -239,7 +258,130 @@ p.jeopardy {
 }
 
 /*MEDIA QUERIES*/
+
+/*ipad*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  {
+    body {
+        font-size: 2em;
+    }
     
+    h1 {
+        font-size: 3em;
+    }
+    
+    /*NAV BAR*/
+
+    a.brand-logo {
+        font-family: 'Fugaz One', cursive;
+        color: rgba(255, 255, 255, 0.69);
+        letter-spacing: 5px;
+        display: inline-block;
+        font-size: 2em;
+        margin-top: 20px;
+        margin-left: 125px;
+    }
+    
+    .avatar {
+        border-radius: 50%;
+        height: 75px;
+        margin-top: 12px;
+        margin-left: 10px;
+    }
+
+    span.title {
+        display: none;
+    }
+    
+    span.mobile-title {
+        display: block;
+        font-size: 1.25em;
+        margin: 50px 0 30px 0;
+        color: rgba(255, 255, 255, 0.3);
+    }
+    
+    .mobile-dot {
+        display: block;
+        color: rgba(255, 255, 255, 0.1);
+        font-size: .5em;
+    }
+
+    nav {
+        height: 100px;
+    }
+    
+    .ion-navicon-round {
+        font-size: 2em;
+        margin: 18px 18px 0 0;
+        color: rgba(255, 255, 255, 0.69);
+    }
+    
+    /*SIDENAV*/
+    .side-nav {
+        width: 50%;    
+    }
+    
+    .side-nav a.btn {
+        height: 20vh;
+        margin: 5%;
+        text-align: center;
+        padding-top: 20%;
+    }
+    
+    .nav a {
+        display: block;
+        font-size: 2em;
+    }
+
+    .nav-button {
+        color: rgba(255, 255, 255, 0.69);
+        
+    }
+    
+    /*WORK SECTION*/
+    .hover {
+        opacity: 1;
+    }
+    
+    .hover:not(hover) {
+        opacity: 1;
+    }
+    
+    .project-desc {
+        padding: 0 20px 10px 20px;
+    }
+    
+    .project-techs {
+        font-weight: 800;
+    }
+    
+    /*ABOUT SECTION*/
+    .about-intro {
+        font-size: 1em;
+        line-height: normal;
+    }
+    
+    .short-bio, .about-text {
+        font-size: 1em;
+    }
+    
+    /*CONTACT SECTION*/
+
+    .contact-icon {
+        color: #a0f;
+    }
+    
+    .contact-title {
+        font-size: 1em;
+    }
+    
+    .contact-block {
+        margin-top: 0;
+    }
+
+}
+
     /*iphone*/
 @media only screen 
 and (min-device-width : 375px) 
@@ -259,6 +401,16 @@ and (max-device-width : 667px) {
         letter-spacing: 5px;
         display: inline-block;
         text-align: center;
+        font-size: 1.75em;
+        margin-top: 50px;
+        margin-left: 150px;
+    }
+    
+    .avatar {
+        border-radius: 50%;
+        height: 100px;
+        margin-top: 25px;
+        margin-left: 25px;
     }
     
     span.title {
@@ -278,18 +430,13 @@ and (max-device-width : 667px) {
         font-size: .5em;
     }
     
-    a.brand-logo {
-        font-size: 2em;
-        margin-top: 50px;
-    }
-    
     nav {
         height: 150px;
     }
     
     .ion-navicon-round {
-        font-size: 2em;
-        margin: 20px 20px 0 0;
+        font-size: 1.75em;
+        margin: 25px 20px 0 0;
         color: rgba(255, 255, 255, 0.69);
     }
     
@@ -324,6 +471,10 @@ and (max-device-width : 667px) {
         opacity: 1;
     }
     
+    .project-techs {
+        font-weight: 800;
+    }
+    
     /*ABOUT SECTION*/
     .about-intro {
         font-size: 2em;
@@ -345,9 +496,8 @@ and (max-device-width : 667px) {
     
     .contact-block {
         margin: 0 50px 20px 50px;
-        border: 2px white solid;
+        border: 8px rgba(255, 255, 255, 0.12) solid;
         border-radius: 20px;
-/*        background-color: #546e7a;*/
     }
 
 }

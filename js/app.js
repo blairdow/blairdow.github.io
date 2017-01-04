@@ -23,6 +23,7 @@ $(function(){
         $('#contact').hide()
         
         $('#work').show()
+        $('#skills').show()
     })    
     
     $('.js--mobile-about-open').on('click', function(){
@@ -35,11 +36,13 @@ $(function(){
                 startTyping()
             }
         })
+        $('#skills').show()
     })    
     
     $('.js--mobile-contact-open').on('click', function(){
         $('#work').hide()
         $('#about').hide()
+        $('#skills').hide()
         
         $('#contact').show()
     })
@@ -49,7 +52,8 @@ $(function(){
         $('#about').hide()
         $('#contact').hide()
         
-        $('#work').slideDown('slow')
+        $('#work').slideDown(2000)
+        $('#skills').show()
     })    
     
     $('.js--about-slide').on('click', function(){
@@ -62,11 +66,14 @@ $(function(){
                 startTyping()
             }
         })
+        
+        $('#skills').show()
     })
     
     $('.js--contact-slide').on('click', function(){
         $('#work').hide()
         $('#about').hide()
+        $('#skills').hide()
         
         $('#contact').slideDown('slow')
     })
