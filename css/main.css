@@ -170,6 +170,31 @@ p.jeopardy {
     color: rgba(255, 255, 255, 0.2);
 }
 
+.github-icon {
+    font-size: 3rem;
+    color: white;
+}
+
+.github-icon:hover {
+    color: #a0f;
+}
+
+.link-block {
+    display: inline-block;
+    padding: 0 5%;
+}
+
+.link-block span {
+    color: rgba(255, 255, 255, 0.2);
+}
+.link-block a {
+    color: white;
+}
+
+.link-block a:hover {
+    color: #a0f;
+}
+
 /*ABOUT SECTION*/
 #about {
     min-height: 100vh;
