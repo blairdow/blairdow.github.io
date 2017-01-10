@@ -69,7 +69,7 @@ span.title, span.mobile-title {
 
 .nav-button:hover {
     text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.46);
-    box-shadow: 0px 0px 15px black;
+    box-shadow: 0px 0px 5px black;
 }
 
 #sidenav-overlay {
@@ -256,7 +256,7 @@ p.jeopardy {
 }
 
 .contact-block {
-    margin-top: 15vh; 
+    margin-top: 10vh; 
 }
 
 .contact-icon {
@@ -279,8 +279,7 @@ p.jeopardy {
 
 .opportunities {
     font-size: 1em;
-    margin-top: 10%;
-    color: rgba(255, 255, 255, 0.35);
+    color: rgba(255, 255, 255, 0.2);
 }
 
 /*MEDIA QUERIES*/
@@ -390,7 +389,28 @@ and (max-device-width : 1024px)  {
     .contact-block {
         margin-top: 10%;
     }
+    
+    .opportunities {
+        margin-top: 10%;
+    }
 
+}
+/*ipad pro*/
+@media only screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 1366px) {
+    .github-block {
+        text-align: center;
+        margin: 0;
+    }
+    
+    .fullscreen-nav {
+        display: none;
+    }
+    
+    nav a.button-collapse {
+        display: inline-block;
+    }
 }
 
     /*iphone*/
