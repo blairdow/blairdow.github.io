@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <title>Blair Dowis</title>
     
     <link href="https://fonts.googleapis.com/css?family=Lato:300|Coda|Fugaz+One" rel="stylesheet">
@@ -57,9 +59,9 @@
 <div class="container">
    
 <!--TITLE and DOTS DIVIDER - HIDDEN ON LARGE SCREENS-->
-    <div class="center"><h4><span class='mobile-title'>FULL STACK DEV</span></h4></div>
+    <div class="center hide-on-large-only"><h4><span class='mobile-title'>FULL STACK DEV</span></h4></div>
     
-    <div class='center'>
+    <div class='center hide-on-large-only'>
         <span class="mobile-dot">&bull; &bull; &bull; </span>
     </div>
 
@@ -67,14 +69,14 @@
     <div id="work" class='section js--section-work' style='display:initial;'>
        <h1 class='center'>WORK</h1>
         <div class="row">
-            <div class="col s12 l4">
+            <div class="col s12 m6 l4">
                 <div class="rounded project-card blue-grey darken-1">
                     <a href="https://blairdow.github.io/blair-snake/">
                         <div class="project-image center">
-                                <img class='rounded-top responsive-img' src="assets/blairsnake.jpg" alt="blair snake image">
-                                <div class="hover project-techs center">
-                                    HTML<span class="dot"> &bull; </span>CSS<span class="dot"> &bull; </span>JAVASCRIPT
-                                </div>
+                            <img class='rounded-top responsive-img' src="assets/blairsnake.jpg" alt="blair snake image">
+                            <div class="hover project-techs center">
+                                HTML<span class="dot"> &bull; </span>CSS<span class="dot"> &bull; </span>JAVASCRIPT
+                            </div>
                         </div>
                         <div class="project-info">
                             <p class='center'>BlairSnake</p>
@@ -82,11 +84,11 @@
                     </a>
                 </div>
             </div>
-            <div class="col s12 l8">
+            <div class="col s12 m6 l8">
                 <div class="project-desc center">
                     <p class='flow-text'>My browser based clone of the classic Nokia game, Snake, with an 8-bit spin. Ironically, cannot be played on mobile due to modern smartphones' lack of arrow keys. Please open on a laptop or desktop for the best experience!</p>
                     <p class='built-with flow-text'>Built with HTML/CSS, HTML Canvas animation and JS/jQuery. I created the 8-bit snake gif and 8-bit food images with Photoshop.</p>
-                    <p>
+                    <p class='github-block'>
                         <a href="https://github.com/blairdow/blair-snake"><i class="ion-social-github-outline github-icon"></i>
                         </a>
                     </p>
@@ -95,7 +97,7 @@
         </div>
 <!--
         <div class="row">
-            <div class="col s12 l4">
+            <div class="col s12 m6 l4">
                 <div class="rounded project-card blue-grey darken-1">
                     <a href="http://ec2-54-183-65-59.us-west-1.compute.amazonaws.com:3000/">
                         <div class="project-image center">
@@ -110,7 +112,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col s12 l8">
+            <div class="col s12 m6 l8">
                 <div class="project-desc center">
                     <p class='flow-text'>Music Alert is an app that allows a user to create a list of songs, artists, and albums, and then sends a daily email with a reminder to listen to a random selection from their list. Perfect for those who keep forgetting to check out that new artist, or listen to that new album on the way home from work!</p>
                     <p class='built-with flow-text'>Built with Ruby on Rails on a PostgreSQL database, and ERB/Bootstrap/CSS frontend. Ruby Action Mailer and Cron task were used to automate emails.</p>
@@ -123,7 +125,7 @@
         </div>
 -->
         <div class='row'>
-            <div class="col s12 l4">
+            <div class="col s12 m6 l4">
                 <div class="rounded project-card blue-grey darken-1">
                     <a href="http://vast-citadel-23192.herokuapp.com/">
                         <div class="project-image center">
@@ -138,11 +140,11 @@
                     </a>
                 </div>
             </div>
-            <div class="col s12 l8">
+            <div class="col s12 m6 l8">
                 <div class="project-desc center">
                     <p class='flow-text'>A chat based Jeopardy game using <a href="http://socket.io/">socket.io</a>. This was a group project, built in 1 week. I was responsible for managing version control on Git, as well as the design. I also built a large part of the game/chat logic.</p>
                     <p class='built-with flow-text'>Built with Node.js, HTML/CSS, jQuery, Socket.io, Materialize.css, and the <a href="http://jservice.io/">jservice.io</a> API, which provided the Jeopardy questions.</p>
-                    <p>
+                    <p class='github-block'>
                         <a href="https://github.com/blairdow/jeopardy-friends"><i class="ion-social-github-outline github-icon"></i>
                         </a>
                     </p>
@@ -150,7 +152,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col s12 l4">
+            <div class="col s12 m6 l4">
                 <div class="rounded project-card blue-grey darken-1">
                     <a href="https://quiet-woodland-25469.herokuapp.com/">
                        <div class="project-image center">
@@ -165,20 +167,22 @@
                     </a>
                 </div>
             </div> 
-            <div class="col s12 l8">
+            <div class="col s12 m6 l8">
                 <div class="project-desc center">
                     <p class='flow-text'>An iOS mobile app using the Petfinder API to allow you to search for pets to adopt in your zip code. The idea came from a friend of mine who wanted "Postmates, but for adopting pets." Users can log in and select their three favorite pets, then click a button to have them delivered! (Next step is to hire a fleet of delivery drivers.)</p>
                     <p class='built-with flow-text'>Built with the Ionic mobile framework, Angular, HTML/CSS, Node.js and MongoDB.</p>
-                    <div class="link-block">
-                        <a href="https://github.com/blairdow/fluffmates"><i class="ion-social-github-outline github-icon"></i>
-                        <br><span>Front End</span>
-                        </a>
-                    </div>
-                    <div class="link-block">
-                        <a href="https://github.com/blairdow/fluffmates-api"><i class="ion-social-github-outline github-icon"></i>
-                        <br><span>Back End</span>
-                        </a>
-                    </div>
+                    <div class="github-block">
+                        <div class="link-block center">
+                            <a href="https://github.com/blairdow/fluffmates"><i class="ion-social-github-outline github-icon"></i>
+                            <br><span>Front End</span>
+                            </a>
+                        </div>
+                        <div class="link-block center">
+                            <a href="https://github.com/blairdow/fluffmates-api"><i class="ion-social-github-outline github-icon"></i>
+                            <br><span>Back End</span>
+                            </a>
+                        </div>
+                    </div>    
                 </div>
             </div>
         </div>
@@ -233,18 +237,25 @@
     <div id="contact" class='section js--section-contact' style='display:none;'>
         <h1 class='center'>CONTACT</h1>
         <div class="row">
-            <div class="col s12 l4 center contact-block">
+            <div class="col s12 m4 center contact-block">
                 <a href="mailto:blairdow@gmail.com"><i class="ion-ios-compose-outline contact-icon"></i>
                 <h4 class='contact-title'>EMAIL</h4><p class='contact-info'>blairdow@gmail.com</p></a>
             </div>
-            <div class="col s12 l4 center contact-block">
+            <div class="col s12 m4 center contact-block">
                 <i class="ion-iphone contact-icon"></i>
                 <h4 class="contact-title">PHONE</h4>
                 <p class='contact-info'>707.337.8033</p>
             </div>
-            <div class="col s12 l4 center contact-block">
+            <div class="col s12 m4 center contact-block">
                 <a href="https://github.com/blairdow"><i class="ion-social-github-outline contact-icon"></i>
                 <h4 class="contact-title">GITHUB</h4><p class='contact-info'>github.com/blairdow</p></a>
+            </div>
+        </div>
+        <div class="row opportunities">
+            <div class="col s12 m10 offset-m1 center">
+                <p class='flow-text'>
+                    I am available for full-time work, contract positions, or freelance projects in the LA area or remotely. Also interested in any and all pet-sitting opportunities.
+                </p>
             </div>
         </div>
     </div>

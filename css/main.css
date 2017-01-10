@@ -26,7 +26,7 @@ h1 {
 }
 
 .mobile-dot {
-    display: none;
+    color: rgba(255, 255, 255, 0.1);
 }
 
 .section {
@@ -54,11 +54,6 @@ span.title, span.mobile-title {
     font-size: .75em;
     letter-spacing: 2px;
     color: rgba(255, 255, 255, 0.15);
-}
-
-    /*title hidden on large screens*/
-span.mobile-title {
-    display: none;
 }
 
 .nav a {
@@ -150,7 +145,7 @@ p.jeopardy {
 
 .project-desc {
     color: rgba(255, 255, 255, 0.69); 
-    padding: 5%;
+/*    padding: 5%;*/
     
 }
 
@@ -288,22 +283,19 @@ p.jeopardy {
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)  {
-    body {
-        font-size: 2em;
-    }
     
-    h1 {
-        font-size: 3em;
+    /*padding from nav bar*/
+    main {
+        padding-top: 50px;
     }
     
     /*NAV BAR*/
-
     a.brand-logo {
         font-family: 'Fugaz One', cursive;
         color: rgba(255, 255, 255, 0.69);
         letter-spacing: 5px;
         display: inline-block;
-        font-size: 2em;
+        font-size: 3em;
         margin-top: 20px;
         margin-left: 125px;
     }
@@ -314,22 +306,11 @@ and (max-device-width : 1024px)  {
         margin-top: 12px;
         margin-left: 10px;
     }
-
-    span.title {
-        display: none;
-    }
     
     span.mobile-title {
-        display: block;
-        font-size: 1.25em;
+        font-size: 1em;
         margin: 50px 0 30px 0;
         color: rgba(255, 255, 255, 0.3);
-    }
-    
-    .mobile-dot {
-        display: block;
-        color: rgba(255, 255, 255, 0.1);
-        font-size: .5em;
     }
 
     nav {
@@ -337,7 +318,7 @@ and (max-device-width : 1024px)  {
     }
     
     .ion-navicon-round {
-        font-size: 2em;
+        font-size: 3em;
         margin: 18px 18px 0 0;
         color: rgba(255, 255, 255, 0.69);
     }
@@ -356,15 +337,18 @@ and (max-device-width : 1024px)  {
     
     .nav a {
         display: block;
-        font-size: 2em;
+        font-size: 3em;
     }
 
     .nav-button {
         color: rgba(255, 255, 255, 0.69);
-        
     }
     
     /*WORK SECTION*/
+    #work .row {
+        margin-top: 8%;
+    }
+    
     .hover {
         opacity: 1;
     }
@@ -374,26 +358,21 @@ and (max-device-width : 1024px)  {
     }
     
     .project-desc {
-        padding: 0 20px 10px 20px;
+        text-align: left;
     }
     
     .project-techs {
         font-weight: 800;
     }
     
+    .github-block {
+        margin-left: 10%;
+        margin-top: -5%;
+    }
+    
     .github-icon {
-        font-size: 4rem;
+        font-size: 3.5rem;
         color: #a0f;
-    }
-    
-    /*ABOUT SECTION*/
-    .about-intro {
-        font-size: 1em;
-        line-height: normal;
-    }
-    
-    .short-bio, .about-text {
-        font-size: 1em;
     }
     
     /*CONTACT SECTION*/
@@ -402,12 +381,14 @@ and (max-device-width : 1024px)  {
         color: #a0f;
     }
     
-    .contact-title {
-        font-size: 1em;
+    .contact-block {
+        margin-top: 10%;
     }
     
-    .contact-block {
-        margin-top: 0;
+    .opportunities {
+        font-size: 1em;
+        margin-top: 10%;
+        color: rgba(255, 255, 255, 0.35);
     }
 
 }
@@ -417,7 +398,7 @@ and (max-device-width : 1024px)  {
 and (min-device-width : 375px) 
 and (max-device-width : 667px) { 
     body {
-        font-size: 4em;
+/*        font-size: 4em;*/
     }
     
     h1 {
@@ -448,14 +429,12 @@ and (max-device-width : 667px) {
     }
     
     span.mobile-title {
-        display: block;
         font-size: 2em;
         margin: 150px 0 30px 0;
         color: rgba(255, 255, 255, 0.3);
     }
     
     .mobile-dot {
-        display: block;
         color: rgba(255, 255, 255, 0.1);
         font-size: .5em;
     }
