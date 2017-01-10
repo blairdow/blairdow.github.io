@@ -196,7 +196,7 @@ p.jeopardy {
     color: #a0f;
 }
 
-/*ABOUT SECTION*/
+/*ABOUT SECTION *****************************/
 #about {
     min-height: 100vh;
 }
@@ -232,8 +232,6 @@ p.jeopardy {
     color: rgba(255, 255, 255, 0.7);
 }
 
-
-
 /*BLINKING CURSOR*/
 .typed-cursor{
     color: rgba(255, 255, 255, 0.35);
@@ -252,13 +250,9 @@ p.jeopardy {
     100% { opacity:1; }
 }
 
-/*CONTACT SECTION*/
+/*CONTACT SECTION*****************************/
 #contact {
     position: relative;
-}
-
-.contact-block {
-    margin-top: 10vh; 
 }
 
 .contact-icon {
@@ -285,7 +279,14 @@ p.jeopardy {
     color: rgba(255, 255, 255, 0.2);
 }
 
-/*MEDIA QUERIES*/
+.resume a {
+    font-family: 'Fugaz One', cursive;
+    color: rgba(255, 255, 255, 0.69);
+    letter-spacing: 5px;
+    
+}
+
+/*MEDIA QUERIES*******************************/
 
 /*ipad*/
 @media only screen 
@@ -305,7 +306,7 @@ and (max-device-width : 1024px)  {
         display: inline-block;
         font-size: 3em;
         margin-top: 20px;
-        margin-left: 125px;
+        margin-left: 100px;
     }
     
     .avatar {
@@ -315,19 +316,17 @@ and (max-device-width : 1024px)  {
         margin-left: 10px;
     }
     
-    span.mobile-title {
-        font-size: 1em;
-        margin: 50px 0 30px 0;
-        color: rgba(255, 255, 255, 0.3);
+    span.title {
+        font-size: .5em;
     }
-
+    
     nav {
         height: 100px;
     }
     
     .ion-navicon-round {
         font-size: 3em;
-        margin: 18px 18px 0 0;
+        margin: 18px 5px 0 0;
         color: rgba(255, 255, 255, 0.69);
     }
     
@@ -339,12 +338,11 @@ and (max-device-width : 1024px)  {
     .side-nav a.btn {
         height: 20vh;
         margin: 5%;
-        text-align: center;
-        padding-top: 20%;
+        line-height: 20vh;
     }
     
     .nav a {
-        display: block;
+/*        display: block;*/
         font-size: 3em;
     }
 
@@ -363,10 +361,6 @@ and (max-device-width : 1024px)  {
     
     .hover:not(hover) {
         opacity: 1;
-    }
-    
-    .project-desc {
-        text-align: left;
     }
     
     .project-techs {
@@ -402,6 +396,10 @@ and (max-device-width : 1024px)  {
 @media only screen 
 and (min-device-width : 1024px) 
 and (max-device-width : 1366px) {
+    span.title {
+        font-size: .75em;
+    }
+    
     .github-block {
         text-align: center;
         margin: 0;
@@ -462,8 +460,7 @@ and (max-device-width : 667px) {
     .side-nav a.btn {
         height: 20vh;
         margin: 5%;
-        text-align: center;
-        padding-top: 15%;
+        line-height: 20vh;
     }
     
     .nav a {
