@@ -132,12 +132,13 @@ p.jeopardy {
 }
 
 .project-techs {
-    color: rgba(255, 255, 255, 0.7);
+    color: white;
     background-color: #aa00ff;
     position: absolute;
     width: 100%;
     padding: 10px;
     bottom: -10px;
+    font-weight: 800;
 }
 
 .rounded {
@@ -279,13 +280,6 @@ p.jeopardy {
     color: rgba(255, 255, 255, 0.2);
 }
 
-.resume a {
-    font-family: 'Fugaz One', cursive;
-    color: rgba(255, 255, 255, 0.69);
-    letter-spacing: 5px;
-    
-}
-
 /*MEDIA QUERIES*******************************/
 
 /*ipad*/
@@ -361,10 +355,6 @@ and (max-device-width : 1024px)  {
     
     .hover:not(hover) {
         opacity: 1;
-    }
-    
-    .project-techs {
-        font-weight: 800;
     }
     
     .github-block {
@@ -480,10 +470,6 @@ and (max-device-width : 667px) {
     
     .hover:not(hover) {
         opacity: 1;
-    }
-    
-    .project-techs {
-        color: white;
     }
     
     .github-icon {
