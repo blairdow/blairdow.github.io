@@ -78,18 +78,6 @@ $(function(){
         $('#contact').slideDown('slow')
     })
     
-    //typing in about section starts when scrolled to
-//    var waypoint = new Waypoint({
-//      element: $('.about-trigger'),
-//      handler: function(direction) {
-//        if(direction == 'down'){
-//            
-//            this.destroy()
-//        }
-//      },
-//      offset: 50
-//    })
-    
 //buttons to fade in/out short bio and long bio
     $('.short-bio-button').on('click', function(){
         $('#long-bio').fadeOut(1000)
