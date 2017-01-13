@@ -1,6 +1,16 @@
 $(function(){   
     console.log('loaded')
     
+//jQuery vars
+    var $work = $('#work')
+    var $about = $('#about')
+    var $contact = $('#contact')
+    var $skills = $('#skills')
+    var $shortBioButton = $('.short-bio-button')
+    var $longBioButton = $('.long-bio-button')
+    var $longBio = $('#long-bio')
+    var $shortBio = $('#short-bio')
+    
 //side navigation for nav bar on mobile
     $(".button-collapse").sideNav({
         closeOnClick: true
@@ -19,74 +29,77 @@ $(function(){
     
 //open and close from sidenav
     $('.js--mobile-work-open').on('click', function(){
-        $('#about').hide()
-        $('#contact').hide()
+        console.log('clicked')
+        $about.hide()
+        $contact.hide()
         
-        $('#work').show()
-        $('#skills').show()
+        $work.show()
+        $skills.show()
     })    
     
     $('.js--mobile-about-open').on('click', function(){
-        $('#work').hide()
-        $('#contact').hide()
+        console.log('clicked')
+        $work.hide()
+        $contact.hide()
         
-        $('#about').show(400, function(){
+        $about.show(400, function(){
             //add typing if typing hasnt already happened
             if(!($('#typed').text())){
                 startTyping()
             }
         })
-        $('#skills').show()
+        $skills.show()
     })    
     
     $('.js--mobile-contact-open').on('click', function(){
-        $('#work').hide()
-        $('#about').hide()
-        $('#skills').hide()
+        console.log('clicked')
+        $work.hide()
+        $about.hide()
+        $skills.hide()
         
-        $('#contact').show()
+        $contact.show()
     })
     
 //slide animation from full screen nav
     $('.js--work-slide').on('click', function(){
-        $('#about').hide()
-        $('#contact').hide()
+        $about.hide()
+        $contact.hide()
         
-        $('#work').slideDown(2000)
-        $('#skills').show()
+        $work.slideDown(2000)
+        $skills.show()
     })    
     
     $('.js--about-slide').on('click', function(){
-        $('#work').hide()
-        $('#contact').hide()
+        $work.hide()
+        $contact.hide()
         
-        $('#about').slideDown('slow', function(){
+        $about.slideDown('slow', function(){
             //add typing if typing hasnt already happened
             if(!($('#typed').text())){
                 startTyping()
             }
         })
         
-        $('#skills').show()
+        $skills.show()
     })
     
     $('.js--contact-slide').on('click', function(){
-        $('#work').hide()
-        $('#about').hide()
-        $('#skills').hide()
+        $work.hide()
+        $about.hide()
+        $skills.hide()
         
-        $('#contact').slideDown('slow')
+        $contact.slideDown('slow')
     })
     
 //buttons to fade in/out short bio and long bio
-    $('.short-bio-button').on('click', function(){
-        $('#long-bio').fadeOut(1000)
-        $('#short-bio').fadeIn(2000)
+    $shortBioButton.on('click', function(){
+        $longBio.fadeOut(1000)
+        $shortBio.fadeIn(2000)
     })
     
-    $('.long-bio-button').on('click', function(){
-        $('#short-bio').fadeOut(1000)
-        $('#long-bio').fadeIn(2000)
+    $longBioButton.on('click', function(){
+        $shortBio.fadeOut(1000)
+        $longBio.fadeIn(2000)
     })
 
 })
