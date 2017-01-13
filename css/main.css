@@ -152,8 +152,6 @@ p.jeopardy {
 
 .project-desc {
     color: rgba(255, 255, 255, 0.69); 
-/*    padding: 5%;*/
-    
 }
 
 .project-desc p {
@@ -164,11 +162,11 @@ p.jeopardy {
     color: rgba(255, 255, 255, 0.2);
 }
 
-.skills-list {
+.skills-list, .refs-list {
     color: rgba(255, 255, 255, 0.69); 
 }
 
-.skill-title {
+.skill-title, .ref-name {
     color: rgba(255, 255, 255, 0.2);
 }
 
@@ -195,6 +193,11 @@ p.jeopardy {
 
 .link-block a:hover {
     color: #a0f;
+}
+
+/*REFERENCES*********************************/
+.ref:first-child {
+    margin-bottom: 1rem;
 }
 
 /*ABOUT SECTION *****************************/
