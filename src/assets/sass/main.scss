@@ -1,3 +1,5 @@
+@import '../vendor/materialize-src/sass/materialize.scss'; 
+
 body {
     font-family: 'Lato', cursive;
     font-weight: 300;
@@ -11,9 +13,15 @@ font-family: 'Fugaz One', cursive;
 font-family: 'Bungee Shade', cursive;
 */
 
-.container {
+// UTILITIES
+.text-white {
+    color: rgba(255, 255, 255, 0.69);
+}
+
+.container.fluid {
     width: 90%;
 }
+/////////////////////
 
 h1 {
     font-family: 'Fugaz One', cursive;
@@ -34,31 +42,27 @@ h1 {
 }
 
 /*NAV BAR*/
-a.brand-logo {
-    font-family: 'Fugaz One', cursive;
-    color: rgba(255, 255, 255, 0.69);
-    letter-spacing: 5px;
-    display: inline-block;
-    margin-left: 75px;
-}
-
-.avatar {
-    border-radius: 50%;
-    height: 50px;
-    margin-top: 7px;
-    margin-left: 10px;
-}
-
-span.title, span.mobile-title {
-    font-family: 'Lato', cursive;
-    font-size: .75em;
-    letter-spacing: 2px;
-    color: rgba(255, 255, 255, 0.15);
-}
-
-.nav a {
-    font-family: 'Fugaz One', cursive;
-    letter-spacing: 2px;
+nav {
+    .avatar {
+        border-radius: 50%;
+        height: 50px;
+        margin: 7px 15px auto 10px;
+    }
+    span.title, span.mobile-title {
+        font-family: 'Lato', cursive;
+        font-size: .75em;
+        letter-spacing: 2px;
+        color: rgba(255, 255, 255, 0.15);
+    }
+    a {
+        font-family: 'Fugaz One', cursive;
+        letter-spacing: 2px;
+        &.brand-logo {
+            color: rgba(255, 255, 255, 0.69);
+            letter-spacing: 5px;
+            display: inline-block;
+        }
+    }
 }
 
 .nav-button {
@@ -67,20 +71,26 @@ span.title, span.mobile-title {
     transition: box-shadow 0.5s ease-out, 
                 text-shadow 0.5s ease-out;
     color: rgba(255, 255, 255, 0.69);
-}
-
-.nav-button:hover {
-    text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.46);
-    box-shadow: 0px 0px 5px black;
-}
-
-#sidenav-overlay {
-    z-index: 0;
+    &.btn {
+        padding: 0 2rem;
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+    &:hover {
+        text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.46);
+        box-shadow: 0px 0px 5px black;
+    }
 }
 
 /*WORK SECTION*/
+.intro {
+    margin-top: 50px;
+
+}
 #work {
+    display: initial;
     padding-top: 0;
+
 }
 
 .project-info p {
@@ -203,87 +213,96 @@ p.jeopardy {
 /*ABOUT SECTION *****************************/
 #about {
     min-height: 100vh;
+
+    .about-intro {
+        color: rgba(255, 255, 255, 0.85);
+    }
+    
+    .about-card {
+        color: rgba(255, 255, 255, 0.85);
+        cursor: pointer;
+        box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.09);
+        -webkit-transition: box-shadow 0.5s;
+        transition: box-shadow 0.5s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+    
+    .about-card:hover {
+        box-shadow: 0px 0px 5px 0px #0f0f0f;
+    }
+    
+    .about-text {
+        color: rgba(255, 255, 255, 0.35);
+    }
+    
+    .about-link {
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    #short-bio, #long-bio {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+    /*BLINKING CURSOR*/
+    .typed-cursor{
+        color: rgba(255, 255, 255, 0.35);
+        opacity: 1;
+        -webkit-animation: blink 0.7s infinite;
+        animation: blink 0.7s infinite;
+    }
+    @keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-webkit-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
 }
 
-.about-intro {
-    color: rgba(255, 255, 255, 0.85);
-}
-
-.about-card {
-    color: rgba(255, 255, 255, 0.85);
-    cursor: pointer;
-    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.09);
-    -webkit-transition: box-shadow 0.5s;
-    transition: box-shadow 0.5s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-}
-
-.about-card:hover {
-    box-shadow: 0px 0px 5px 0px #0f0f0f;
-}
-
-.about-text {
-    color: rgba(255, 255, 255, 0.35);
-}
-
-.about-link {
-    font-weight: 800;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-#short-bio, #long-bio {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/*BLINKING CURSOR*/
-.typed-cursor{
-    color: rgba(255, 255, 255, 0.35);
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-}
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
 
 /*CONTACT SECTION*****************************/
 #contact {
     position: relative;
+
+    .contact-icon {
+            font-size: 4em;
+            color: rgba(255, 255, 255, 0.7);
+            -webkit-transition: color 0.25s ease-out;
+            transition: color 0.25s ease-out;
+        }
+    
+    .contact-block:hover .contact-icon,
+    .contact-block:active .contact-icon {
+        color: #aa00ff;
+    }
+
+    .contact-title {
+        color: rgba(255, 255, 255, 0.12);
+    }
+
+    .contact-info {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .opportunities {
+        font-size: 1em;
+        color: rgba(255, 255, 255, 0.2);
+    }
 }
 
-.contact-icon {
-    font-size: 4em;
-    color: rgba(255, 255, 255, 0.7);
-    -webkit-transition: color 0.25s ease-out;
-    transition: color 0.25s ease-out;
-}
 
-.contact-block:hover .contact-icon, .contact-block:active .contact-icon {
-    color: #aa00ff;
-}
-
-.contact-title {
-    color: rgba(255, 255, 255, 0.12);
-}
-
-.contact-info {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.opportunities {
-    font-size: 1em;
-    color: rgba(255, 255, 255, 0.2);
-}
 
 /*MEDIA QUERIES*******************************/
+@media only screen and (min-width : 993px) {
+    .intro {
+        // margin-top: 75px;
+    }
+}
 
 /*ipad*/
 @media only screen 

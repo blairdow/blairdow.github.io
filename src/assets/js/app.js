@@ -1,6 +1,14 @@
+//side navigation for nav bar on mobile
+document.addEventListener('DOMContentLoaded', function() {
+    let elems = document.querySelectorAll('.sidenav');
+    let options = {
+        edge: 'right'
+    }
+    let instances = M.Sidenav.init(elems, options);
+    console.log(instances)
+});
+
 $(function(){   
-    console.log('loaded')
-    
 //jQuery vars
     var $work = $('#work')
     var $about = $('#about')
@@ -10,11 +18,6 @@ $(function(){
     var $longBioButton = $('.long-bio-button')
     var $longBio = $('#long-bio')
     var $shortBio = $('#short-bio')
-    
-//side navigation for nav bar on mobile
-    $(".button-collapse").sideNav({
-        closeOnClick: true
-    });
     
 //function to start typing animation in About section
     function startTyping(){
