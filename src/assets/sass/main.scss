@@ -21,6 +21,11 @@ font-family: 'Bungee Shade', cursive;
 .container.fluid {
     width: 90%;
 }
+
+.emphasis {
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.8);
+}
 /////////////////////
 
 h1 {
@@ -234,11 +239,6 @@ p.jeopardy {
     
     .about-text {
         color: rgba(255, 255, 255, 0.35);
-    }
-    
-    .about-link {
-        font-weight: 800;
-        color: rgba(255, 255, 255, 0.8);
     }
     
     #short-bio, #long-bio {

@@ -23,10 +23,10 @@ $(function(){
     function startTyping(){
         $("#typed").typed({
             stringsElement: $('#typed-strings'),
-            typeSpeed: 15,
-            callback: function(){
-                $('.bio-buttons').fadeIn(4000)
-            }
+            typeSpeed: 20,
+            // callback: function(){
+            //     $('.bio-buttons').fadeIn(4000)
+            // }
         });
     }
     
@@ -95,14 +95,14 @@ $(function(){
     })
     
 //buttons to fade in/out short bio and long bio
-    $shortBioButton.on('click', function(){
-        $longBio.fadeOut(1000)
-        $shortBio.fadeIn(2000)
-    })
+    // $shortBioButton.on('click', function(){
+    //     $longBio.fadeOut(1000)
+    //     $shortBio.fadeIn(2000)
+    // })
     
-    $longBioButton.on('click', function(){
-        $shortBio.fadeOut(1000)
-        $longBio.fadeIn(2000)
-    })
+    // $longBioButton.on('click', function(){
+    //     $shortBio.fadeOut(1000)
+    //     $longBio.fadeIn(2000)
+    // })
 
 })
