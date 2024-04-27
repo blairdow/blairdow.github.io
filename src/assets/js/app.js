@@ -1,12 +1,16 @@
-//side navigation for nav bar on mobile
 document.addEventListener('DOMContentLoaded', function() {
+    //side navigation for nav bar on mobile
     let elems = document.querySelectorAll('.sidenav');
     let options = {
         edge: 'right'
     }
     let instances = M.Sidenav.init(elems, options);
-    console.log(instances)
+    
+    //contact modal
+    let modals = document.querySelectorAll('.modal');
+    let modalInstances = M.Modal.init(modals, {});
 });
+
 
 $(function(){   
 //jQuery vars

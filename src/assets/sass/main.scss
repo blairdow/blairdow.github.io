@@ -18,13 +18,21 @@ font-family: 'Bungee Shade', cursive;
     color: rgba(255, 255, 255, 0.69);
 }
 
-.container.fluid {
-    width: 90%;
+.container {
+    &.fluid {
+        width: 90%;
+    }
+    &.md {
+        width: 90%;
+        max-width: 768px;
+    }
 }
-
 .emphasis {
     font-weight: 800;
     color: rgba(255, 255, 255, 0.8);
+}
+.my-10 {
+    margin: 10px auto;
 }
 /////////////////////
 
@@ -36,6 +44,9 @@ h1 {
 
 .dot {
     color: rgba(255, 255, 255, 0.32);
+    &.large {
+        font-size: 3rem;
+    }
 }
 
 .mobile-dot {

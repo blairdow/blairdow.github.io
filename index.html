@@ -34,7 +34,7 @@
     <nav class="blue-grey darken-1">
       <div class="nav-wrapper">
         <a class='brand-logo left'><img src="src/assets/img/bd_twitter.jpg" alt="avatar" class='left img-responsive avatar'>BLAIR DOWIS<span class='title hide-on-small-only'>
-            FRONT-END DEV
+            FRONT-END ENGINEER
         </span></a>
         
         <!--MOBILE NAV hamburger button-->
@@ -42,17 +42,13 @@
         
         <!--FULL SCREEN NAV BAR-->
         <ul class="right hide-on-med-and-down fullscreen-nav">
-          <li class='nav-item js--work-slide'><a class="nav-button btn purple accent-4" href="#">WORK</a></li>
-          <li class='nav-item js--about-slide'><a class="nav-button btn purple accent-4" href="#">ABOUT</a></li>
-          <li class='nav-item js--contact-slide'><a class="nav-button btn purple accent-4" href="#">CONTACT</a></li>
+          <li class='nav-item'><a class="nav-button btn purple accent-4 modal-trigger" href="#contact-modal">CONTACT</a></li>
         </ul>
       </div>
     </nav>
   </div>      
   <!--MOBILE SIDE NAV      -->
   <ul class="sidenav blue-grey darken-1" id="slide-out">
-      <li class='nav-item js--mobile-work-open'><a class="nav-button btn purple accent-4">WORK</a></li>
-      <li class='nav-item js--mobile-about-open'><a class="nav-button btn purple accent-4" href="#">ABOUT</a></li>
       <li class='nav-item js--mobile-contact-open'><a class="nav-button btn purple accent-4" href="#">CONTACT</a></li>
   </ul>
 </header>
@@ -60,126 +56,33 @@
 <!--BODY CONTAINER-->
 <main> 
 
-  <div class="container fluid">
-    <h1>ABOUT ME</h1>
-    <p class="flow-text text-white">HI there! Im Blair, a front-end engineer who has a deep love for CSS, and also knows enough back end PHP/Laravel to be only mildly dangerous to your codebase. As a former designer, I love working closely with them, and am able to speak their language and understand design files in a way that eludes many other computer nerds out there. want your designers to fall in love with your new hire? it me.</p>
+  <div class="container">
+    <h1>HI THERE!<br />I'M BLAIR</h1>
+    <p class="flow-text text-white">If you're reading this, I probably applied to a position that you are looking to fill. How exciting for us to be on this journey together! (Just kidding, I'm normal.)</p> 
     
-    <p class="flow-text text-white">In 2016, I built a clone of the classic Nokia game, Snake, with an 8-bit spin. I thought it would be a fun challenge to refactor it, and also a good way to show what I've learned in the last 7 years. My original version was pretty good for someone who was semi-new to coding, but there were definitely improvements to be made.</p>
+    <p class="flow-text text-white">I'm a front-end engineer who has been working full time in the industry <span class="purple accent-4 emphasis">since 2017</span>. I have a <span class="purple accent-4 emphasis">deep love for CSS</span>, a love/hate relationship with JavaScript, and also know enough back-end PHP/Laravel to be only mildly dangerous to your codebase. As a <span class="purple accent-4 emphasis">former designer</span>, I love working closely with them, and am able to speak their language and understand design files in a way that eludes many other engineers out there. Want your designers to fall in love with your new hire? It me.</p>
 
-    <p class="flow-text text-white">The main things were: 
+    <p class="flow-text text-white">
+        When I'm not meticulously arranging my stylesheets, I like <span class="purple accent-4 emphasis">rock climbing</span> (indoors and out), going to shows, generally enjoying the Southern California nature and weather, and hanging out with my cat. 
+    </p>
+
+    <div class='center'>
+        <span class="dot large">&bull; &bull; &bull; </span>
+    </div>
+    
+    <p class="flow-text text-white">In 2016, when I was just a baby engineer, I built a clone of the <span class="purple accent-4 emphasis">classic Nokia game, Snake,</span> with an 8-bit spin. I thought it would be a fun challenge to <span class="purple accent-4 emphasis">refactor</span> it, and also a good way to show off how my skills have improved in the last 7 years. My original version was pretty good for someone who was semi-new to coding, but there were definitely improvements to be made. (When are there not?)</p>
+
+    <p class="flow-text text-white">The <span class="purple accent-4 emphasis">main changes</span> were: 
       <ul class="browser-default text-white flow-text">
-        <li>rewriting the project in vanilla JS so I could get rid of jQuery</li>
-        <li>actually making it work on mobile (ironically my original version only worked on desktop due to it using the arrow keys)</li>
-        <li>adding Webpack (definitely overkill for this game, but good practice) </li>
-        <li>adding Tailwind.css (not everyone's favorite way to CSS, but for me the benefits outweigh the drawbacks)</li>
+        <li class="my-10">Rewriting the project in Vanilla JS so I could remove jQuery</li>
+        <li class="my-10">Actually making it work on mobile (ironically my original version only worked on desktop due to it using the arrow keys)</li>
+        <li class="my-10">Adding Webpack (definitely overkill for this game, but good practice) </li>
+        <li class="my-10">Adding Tailwind.css (not everyone's favorite way to CSS, but for me the benefits outweigh the drawbacks)</li>
       </ul>
     </p>
   </div>
 
   <div class="container">
-   
-    <!--WORK SECTION-->
-    <section id="work" class='section js--section-work'>
-
-        <!--TITLE and DOTS DIVIDER - HIDDEN ON LARGE SCREENS-->
-        <!-- <div class="center hide-on-med-and-up"><h4><span class='mobile-title'>FRONT END DEV</span></h4></div>
-
-        <div class='center hide-on-med-and-up'>
-            <span class="mobile-dot">&bull; &bull; &bull; </span>
-        </div>
-         -->
-        <h1 class='center'>WORK</h1>
-        <div class="row">
-            
-        </div>
-        <div class="row">
-            <div class="col s12 m6 l4">
-                <div class="rounded project-card blue-grey darken-1">
-                        <div class="project-image center">
-                            <img class='rounded-top responsive-img' src="src/assets/img/music_alert.jpg" alt="music alert image">
-                            <div class="hover project-techs center">
-                                RUBY ON RAILS<span class="dot"> &bull; </span>ERB
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <p class='center'>Music Alert</p>
-                        </div>
-                </div>
-            </div>
-            <div class="col s12 m6 l8">
-                <div class="project-desc center">
-                    <p class='flow-text'>Music Alert is an app that allows a user to create a list of songs, artists, and albums, and then sends a daily email with a reminder to listen to a random selection from their list. Perfect for those who keep forgetting to check out that new artist, or listen to that new album on the way home from work!</p>
-                    <p class='built-with flow-text'>Built with Ruby on Rails on a PostgreSQL database, and ERB/Bootstrap/CSS frontend. Ruby Action Mailer and Cron task were used to automate emails.</p>
-                    <p>
-                        <a href="https://github.com/blairdow/music-alert"><i class="ion-social-github-outline github-icon"></i>
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class='row'>
-            <div class="col s12 m6 l4">
-                <div class="rounded project-card blue-grey darken-1">
-                  <a href="http://vast-citadel-23192.herokuapp.com/" target="_blank">
-                        <div class="project-image center">
-                            <img class='rounded-top responsive-img' src="src/assets/img/trebek_homepage.jpg" alt="jeopardy image">
-                            <div class="hover project-techs center">
-                                NODE.JS<span class="dot"> &bull; </span>SOCKET.IO<span class="dot"> &bull; </span>MATERIALIZE CSS
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <p class='center jeopardy'>Jeopardy with Friends - Live!</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col s12 m6 l8">
-                <div class="project-desc center">
-                    <p class='flow-text'>A chat based Jeopardy game using <a href="http://socket.io/">socket.io</a>. This was a group project, built in 1 week. I was responsible for managing version control on Git, as well as the design. I also built a large part of the game/chat logic.</p>
-                  <p class='built-with flow-text'>Built with Node.js, HTML/CSS, jQuery, Socket.io, Materialize.css, and the <a href="http://jservice.io/" target="_blank">jservice.io</a> API, which provided the Jeopardy questions.</p>
-                    <p class='github-block'>
-                      <a href="https://github.com/blairdow/jeopardy-friends" target="_blank"><i class="ion-social-github-outline github-icon"></i>
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12 m6 l4">
-                <div class="rounded project-card blue-grey darken-1">
-                  <a href="https://fluffmates.herokuapp.com/" target="_blank">
-                       <div class="project-image center">
-                            <img class='rounded-top responsive-img' src="src/assets/img/fluffmates.jpg" alt="fluffmates image">
-                            <div class="hover project-techs center">
-                                IONIC MOBILE<span class="dot"> &bull; </span>NODE.JS<span class="dot"> &bull; </span>ANGULAR
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <p class='center'>FluffMates</p>
-                        </div>
-                    </a>
-                </div>
-            </div> 
-            <div class="col s12 m6 l8">
-                <div class="project-desc center">
-                    <p class='flow-text'>An iOS mobile app using the Petfinder API to allow you to search for pets to adopt in your zip code. The idea came from a friend of mine who wanted "Postmates, but for adopting pets." Users can log in and select their three favorite pets, then click a button to have them delivered! (Next step is to hire a fleet of delivery drivers.)</p>
-                    <p class='built-with flow-text'>Built with the Ionic mobile framework, Angular, HTML/CSS, Node.js and MongoDB.</p>
-                    <div class="github-block">
-                        <div class="link-block center">
-                          <a href="https://github.com/blairdow/fluffmates" target="_blank"><i class="ion-social-github-outline github-icon"></i>
-                            <br><span>Front End</span>
-                            </a>
-                        </div>
-                        <div class="link-block center">
-                          <a href="https://github.com/blairdow/fluffmates_api" target="_blank"><i class="ion-social-github-outline github-icon"></i>
-                            <br><span>Back End</span>
-                            </a>
-                        </div>
-                    </div>    
-                </div>
-            </div>
-        </div>
-    </section> 
     
     <!--ABOUT SECTION-->
     <div id="about" class='section js--section-about about-trigger' style='display:none;'>
@@ -212,40 +115,48 @@
     
 
 <!--contact section-->
-    <div id="contact" class='section js--section-contact' style='display:none;'>
-        <h1 class='center'>CONTACT</h1>
-        <div class="row">
-            <div class="col s10 offset-s1 m5 offset-m1 l3 center contact-block">
-                <a href="mailto:blairdow@gmail.com"><i class="ion-ios-compose-outline contact-icon"></i>
-                <h4 class='contact-title'>EMAIL</h4><p class='contact-info'>blairdow@gmail.com</p></a>
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+        <h4>CONTACT</h4>    
+        <div id="contact" class='section js--section-contact'>
+            <div class="row">
+                <div class="col s10 offset-s1 m5 offset-m1 l3 center contact-block">
+                    <a href="mailto:blairdow@gmail.com"><i class="ion-ios-compose-outline contact-icon"></i>
+                    <h4 class='contact-title'>EMAIL</h4><p class='contact-info'>blairdow@gmail.com</p></a>
+                </div>
+                <div class="col s10 offset-s1 m5 l3 center contact-block">
+                    <a href="tel:1-707-337-8033"><i class="ion-iphone contact-icon"></i></a>
+                    <h4 class="contact-title">PHONE</h4>
+                    <p class='contact-info'>707.337.8033</p>
+                </div>
+                <div class="col s10 offset-s1 m5 offset-m1 l3 center contact-block">
+                <a href="https://github.com/blairdow" target="_blank"><i class="ion-social-github-outline contact-icon"></i>
+                    <h4 class="contact-title">GITHUB</h4><p class='contact-info'>github.com/blairdow</p></a>
+                </div>
+                <div class="col s10 offset-s1 m5 l3 center contact-block">
+                    <a href="https://www.linkedin.com/in/blairdow" target="_blank"><i class="ion-social-linkedin-outline contact-icon"></i>
+                    <h4 class="contact-title">LINKEDIN</h4><p class='contact-info'>linkedin.com/in/blairdow</p></a>
+                </div>
             </div>
-            <div class="col s10 offset-s1 m5 l3 center contact-block">
-                <a href="tel:1-707-337-8033"><i class="ion-iphone contact-icon"></i></a>
-                <h4 class="contact-title">PHONE</h4>
-                <p class='contact-info'>707.337.8033</p>
-            </div>
-            <div class="col s10 offset-s1 m5 offset-m1 l3 center contact-block">
-              <a href="https://github.com/blairdow" target="_blank"><i class="ion-social-github-outline contact-icon"></i>
-                <h4 class="contact-title">GITHUB</h4><p class='contact-info'>github.com/blairdow</p></a>
-            </div>
-            <div class="col s10 offset-s1 m5 l3 center contact-block">
-                <a href="https://www.linkedin.com/in/blairdow" target="_blank"><i class="ion-social-linkedin-outline contact-icon"></i>
-                <h4 class="contact-title">LINKEDIN</h4><p class='contact-info'>linkedin.com/in/blairdow</p></a>
-            </div>
-        </div>
-        <div class="row opportunities">
-            <div class="col s12 m10 offset-m1 center">
-                <p class='flow-text'>
-                    I am available for full-time work, contract positions, or freelance projects in the LA area or remotely. Especially interested in CSS/design system heavy positions. Also interested in any and all pet-sitting opportunities.
-                </p>
-            </div>
-            <div class="col s12 center">
-                <div class="resume">
-                    <a href='assets/BlairDowisResume2020.pdf' class="btn-large nav-button purple accent-4"><i class="ion-ios-paper-outline material-icons left"></i>View/Download my resume</a>
+            <div class="row opportunities">
+                <div class="col s12 m10 offset-m1 center">
+                    <p class='flow-text'>
+                        I am available for full-time work, contract positions, or freelance projects in the LA area or remotely. Especially interested in CSS/design system heavy positions. Also interested in any and all pet-sitting opportunities.
+                    </p>
+                </div>
+                <div class="col s12 center">
+                    <div class="resume">
+                        <a href='assets/BlairDowisResume2020.pdf' class="btn-large nav-button purple accent-4"><i class="ion-ios-paper-outline material-icons left"></i>View/Download my resume</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
     
 <!--SKILLS-->
   <div id="skills">
@@ -258,11 +169,11 @@
             <h1 class='center'>SKILLS</h1>
                 <ul class='skills-list'>
                     <li><span class="skill-title">Languages: </span>HTML, CSS/SaSS, Javascript/Typescript, PHP</li>
-                    <li><span class='skill-title'>Front-end: </span>Angular, Vue, React, Tailwind, jQuery</li>
+                    <li><span class='skill-title'>Front-end: </span>Angular, Vue, React, Tailwind, Webpack, jQuery</li>
                     <li><span class='skill-title'>Back-end: </span>Node.js + Express, Laravel</li>
                     <li><span class='skill-title'>Mobile: </span>Ionic (iOS/Android framework)</li>
                     <li><span class='skill-title'>Databases: </span>MYSQL, PostgreSQL, MongoDB</li>
-                    <li><span class='skill-title'>Workflow: </span>Agile/Scrum, Trello</li>
+                    <li><span class='skill-title'>Workflow: </span>Github, Jira, Asana, Trello</li>
                     <li><span class='skill-title'>Design: </span>Adobe Creative Suite, Canva, Wire-Framing</li>
                 </ul>
         </div>
