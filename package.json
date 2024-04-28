@@ -4,9 +4,8 @@
   "description": "My personal portfolio site",
   "main": "assets/js/app.js",
   "scripts": {
-    "dev": "sass src/assets/sass/main.scss build/css/main.css && npx tailwindcss -i build/css/main.css -o ./build/css/tailwind.css --watch",
-    "sass": "sass  --watch src/assets/sass/main.scss build/css/main.css",
-    "tailwind": "npx tailwindcss -i ./src/assets/sass/main.scss -o ./build/css/tailwind2.css --watch"
+    "dev": "sass src/assets/sass/main.scss build/css/main.css --watch",
+    "sass": "sass  --watch src/assets/sass/main.scss build/css/main.css"
   },
   "repository": {
     "type": "git",
@@ -17,11 +16,5 @@
   "bugs": {
     "url": "https://github.com/blairdow/blairdow.github.io/issues"
   },
-  "homepage": "https://github.com/blairdow/blairdow.github.io#readme",
-  "devDependencies": {
-    
-  },
-  "dependencies": {
-   
-  }
+  "homepage": "https://github.com/blairdow/blairdow.github.io#readme"
 }

@@ -1,3 +1,4 @@
+// materialize.cs event listeners
 document.addEventListener('DOMContentLoaded', function() {
     //side navigation for nav bar on mobile
     let elems = document.querySelectorAll('.sidenav');
@@ -8,105 +9,73 @@ document.addEventListener('DOMContentLoaded', function() {
     
     //contact modal
     let modals = document.querySelectorAll('.modal');
-    let modalInstances = M.Modal.init(modals, {});
+    let modalOptions = {
+        endingTop: 0,
+    }
+    let modalInstances = M.Modal.init(modals, modalOptions);
 });
 
+///////////////////////////////
+// MOBILE NAV MENU ANIMATION
+//////////////////////////////
+const openButton = document.getElementById('contact-button');
+const closeButton = document.getElementById('close-button');
+const modalEl = document.getElementById('modal')
+const overlay = document.getElementById('modal-overlay')
+// const openSvg = document.querySelector('svg#open-svg') //svgs are the menu button hamburger and X
+// const closeSvg = document.querySelector('svg#close-svg')
 
-$(function(){   
-//jQuery vars
-    var $work = $('#work')
-    var $about = $('#about')
-    var $contact = $('#contact')
-    var $skills = $('#skills')
-    var $shortBioButton = $('.short-bio-button')
-    var $longBioButton = $('.long-bio-button')
-    var $longBio = $('#long-bio')
-    var $shortBio = $('#short-bio')
-    
-//function to start typing animation in About section
-    function startTyping(){
-        $("#typed").typed({
-            stringsElement: $('#typed-strings'),
-            typeSpeed: 20,
-            // callback: function(){
-            //     $('.bio-buttons').fadeIn(4000)
-            // }
-        });
-    }
-    
-//open and close from sidenav
-    $('.js--mobile-work-open').on('click', function(){
-        console.log('clicked')
-        $about.hide()
-        $contact.hide()
-        
-        $work.show()
-        $skills.show()
-    })    
-    
-    $('.js--mobile-about-open').on('click', function(){
-        console.log('clicked')
-        $work.hide()
-        $contact.hide()
-        
-        $about.show(400, function(){
-            //add typing if typing hasnt already happened
-            if(!($('#typed').text())){
-                startTyping()
-            }
-        })
-        $skills.show()
-    })    
-    
-    $('.js--mobile-contact-open').on('click', function(){
-        console.log('clicked')
-        $work.hide()
-        $about.hide()
-        $skills.hide()
-        
-        $contact.show()
-    })
-    
-//slide animation from full screen nav
-    $('.js--work-slide').on('click', function(){
-        $about.hide()
-        $contact.hide()
-        
-        $work.slideDown(2000)
-        $skills.show()
-    })    
-    
-    $('.js--about-slide').on('click', function(){
-        $work.hide()
-        $contact.hide()
-        
-        $about.slideDown('slow', function(){
-            //add typing if typing hasnt already happened
-            if(!($('#typed').text())){
-                startTyping()
-            }
-        })
-        
-        $skills.show()
-    })
-    
-    $('.js--contact-slide').on('click', function(){
-        $work.hide()
-        $about.hide()
-        $skills.hide()
-        
-        $contact.slideDown('slow')
-    })
-    
-//buttons to fade in/out short bio and long bio
-    // $shortBioButton.on('click', function(){
-    //     $longBio.fadeOut(1000)
-    //     $shortBio.fadeIn(2000)
-    // })
-    
-    // $longBioButton.on('click', function(){
-    //     $shortBio.fadeOut(1000)
-    //     $longBio.fadeIn(2000)
-    // })
-
+modalEl.addEventListener('animationend', (e) => {
+  if(e.animationName === 'rotateOut') {
+    modalEl.classList.remove('animate-rotate-out')
+    overlay.classList.remove('animate-fade-out-delay')
+    toggleClass([modalEl, overlay], 'hidden')
+    modalEl.classList.add('animate-rotate-in')
+    overlay.classList.add('animate-fade-in')
+  }
+  if(e.animationName === 'rotateIn') {
+    modalEl.classList.remove('animate-rotate-in')
+    overlay.classList.remove('animate-fade-in')
+  }
 })
+
+openButton.onclick = (event) => {
+    //menu is closed, this openButtons animate-in
+    // toggleClass([openSvg, closeSvg], 'hidden')
+    toggleClass([modalEl, overlay], 'hidden')
+}
+
+closeButton.onclick = (event) => {
+    //menu is open, adding class openButtons animate-out 
+   if(!(modalEl.classList.contains('hidden'))) {
+        closeNav()
+    }
+}
+
+//these event listeners close the menu if user clicks outside of the menu or pushes Esc white it is open
+document.addEventListener( "click", e => {
+  if(!(modalEl.classList.contains('hidden')) && e.target.matches("#modal-overlay")) {
+    closeNav()
+  } else { return false; }
+})
+document.addEventListener('keyup', e => {
+  if(!(modalEl.classList.contains('hidden')) && e.key === 'Escape') {
+    closeNav()
+  } else { return false; }
+})
+
+function closeNav() {
+//   toggleClass([openSvg, closeSvg], 'hidden')
+  modalEl.classList.add('animate-rotate-out')
+  overlay.classList.add('animate-fade-out-delay')
+}
+
+function toggleClass(elArray, className) {
+  elArray.map(el => {
+    el.classList.toggle(className)
+  })
+}
+///////////////////////////////
+// END MOBILE NAV MENU ANIMATION
+//////////////////////////////
+

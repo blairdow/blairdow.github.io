@@ -1,5 +1,11 @@
 @import '../vendor/materialize-src/sass/materialize.scss'; 
 
+// colors!
+$purple: #aa00ff;
+$white-10: rgba(255, 255, 255, 0.1);
+$white-70: rgba(255, 255, 255, 0.7);
+$white-80: rgba(255, 255, 255, 0.8);
+
 body {
     font-family: 'Lato', cursive;
     font-weight: 300;
@@ -15,7 +21,7 @@ font-family: 'Bungee Shade', cursive;
 
 // UTILITIES
 .text-white {
-    color: rgba(255, 255, 255, 0.69);
+    color: $white-70;
 }
 
 .container {
@@ -29,16 +35,19 @@ font-family: 'Bungee Shade', cursive;
 }
 .emphasis {
     font-weight: 800;
-    color: rgba(255, 255, 255, 0.8);
+    color: $white-80;
 }
 .my-10 {
     margin: 10px auto;
+}
+.hidden {
+    display: none; 
 }
 /////////////////////
 
 h1 {
     font-family: 'Fugaz One', cursive;
-    color: rgba(255, 255, 255, 0.1);
+    color: $white-10;
     letter-spacing: 10px;
 }
 
@@ -50,12 +59,9 @@ h1 {
 }
 
 .mobile-dot {
-    color: rgba(255, 255, 255, 0.1);
+    color: $white-10;
 }
 
-.section {
-    height: 100%;
-}
 
 /*NAV BAR*/
 nav {
@@ -74,11 +80,153 @@ nav {
         font-family: 'Fugaz One', cursive;
         letter-spacing: 2px;
         &.brand-logo {
-            color: rgba(255, 255, 255, 0.69);
+            color: $white-70;
             letter-spacing: 5px;
             display: inline-block;
         }
     }
+}
+
+// animations
+@keyframes rotateIn {
+    0% { transform: rotateY(90deg) };
+    50% { transform: scale(1.05)};
+    80% { transform: rotateY(-10deg) scale(1)};
+    100% { transform: rotateY(0) };
+}
+.animate-rotate-in {
+    animation: rotateIn 600ms ease-in-out forwards
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 100%;}
+}
+.animate-fade-in {
+    animation: fadeIn 300ms ease-in forwards;
+}
+@keyframes rotateOut {
+    0% { transform: rotateY(0); }
+    20% { transform: rotateY(-10deg) scale(1); } 
+    50% { transform: scale(1.05) }
+    100% { transform: rotateY(90deg); }
+}
+.animate-rotate-out {
+    animation: rotateOut 600ms ease-in-out forwards
+}
+@keyframes fadeOut {
+    from { opacity: 100%;}
+    to { opacity: 0;}
+}
+
+.animate-fade-out-delay {
+    animation: fadeOut 300ms ease-out 300ms forwards
+}
+
+/*CONTACT MODAL*********************************/
+.hex-mobile-menu-clip {
+    clip-path: url(#hex-mobile-menu);
+}
+
+.hex-hero-clip {
+    clip-path: url(#hex-hero);
+}
+#modal-overlay {
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    display: none;
+    z-index: 30;
+}
+#modal {
+    padding: .5rem;
+    background: rgba(0, 0, 0, 0.1);
+    transform-origin: top right;
+    position: absolute;
+    right: -0.5rem;
+    top: -0.5rem;
+    z-index: 1000;
+    max-width: 620px;
+
+    #close-button {
+        padding: .5rem;
+        border: 2px solid $white-70;
+        border-radius: 7px;
+        margin: 1rem 1rem 0 0;
+        background: transparent;
+        cursor: pointer;
+        &:hover, &:active {
+            background: rgba(0, 0, 0, 0.1);
+            border-color: $purple;
+            #close-svg {
+                stroke: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+
+    #close-svg {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .modal-content {
+        padding: 4rem 1.5rem 6.5rem 4rem;
+        text-align: center;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: flex-end;
+
+        .contact-icon {
+            font-size: 4rem;
+            color: $white-70;
+            -webkit-transition: color 0.25s ease-out;
+            transition: color 0.25s ease-out;
+            position: relative;
+            top: 11px;
+        }
+
+        .contact-block {
+            margin-top: 0.75rem;
+
+            &:first-child {
+                // margin-top: 0;
+            }
+
+            &.resume {
+                margin-top: 3.5rem;
+            }
+
+            a {
+                // display: flex;
+                // align-items: center;
+            }
+        }
+
+        .contact-block:hover .contact-icon,
+        .contact-block:active .contact-icon {
+            color: $purple;
+        }
+
+        .contact-block:hover .contact-info,
+        .contact-block:active .contact-info {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .contact-title {
+            font-family: 'Fugaz One', cursive;
+            color: $white-10;
+            letter-spacing: 10px;
+        }
+
+        .contact-info {
+            color: $white-70;
+            margin: 0 auto 0 .5rem;
+            // display: inline-block;
+        }
+    }
+    
 }
 
 .nav-button {
@@ -86,7 +234,7 @@ nav {
                 text-shadow 0.5s ease-out;
     transition: box-shadow 0.5s ease-out, 
                 text-shadow 0.5s ease-out;
-    color: rgba(255, 255, 255, 0.69);
+    color: $white-70;
     &.btn {
         padding: 0 2rem;
         font-size: 15px;
@@ -98,212 +246,16 @@ nav {
     }
 }
 
-/*WORK SECTION*/
-.intro {
-    margin-top: 50px;
-
-}
-#work {
-    display: initial;
-    padding-top: 0;
-
-}
-
-.project-info p {
-    color: rgba(255, 255, 255, 0.69);
-    font-size: 1.5em;
-    margin: 0;
-}
-
-p.jeopardy {
-    font-size: 1.25em;
-    margin-top: 5px
-}
-
-.project-image {
-    position: relative;
-}
-
-.project-info {
-    padding: 15px 0 2px;
-}
-
-.project-card {
-    margin-bottom: 20px;
-    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.09);
-    -webkit-transition: box-shadow 0.5s;
-    transition: box-shadow 0.5s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-}
-
-.project-card:hover {
-    box-shadow: 0px 0px 15px #0f0f0f;
-}
-
-.hover {
-    opacity: 0;
-}
-
-.project-card:hover .hover {
-    opacity: 1;
-}
-
-.hover:not(hover) {
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
-    -webkit-transition: opacity 0.5s ease-out;
-    transition: opacity 0.5s ease-out;
-    opacity: 0;
-}
-
-.project-techs {
-    color: white;
-    background-color: #aa00ff;
-    position: absolute;
-    width: 100%;
-    padding: 10px;
-    bottom: -10px;
-    font-weight: 800;
-}
-
-.rounded {
-    border-radius: 8px;
-}
-
-.rounded-top {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-
-.project-desc {
-    color: rgba(255, 255, 255, 0.69); 
-}
-
-.project-desc p {
-    font-size: 1.25em;
-}
-
-.built-with {
-    color: rgba(255, 255, 255, 0.2);
-}
-
+/*SKILLS & REFERENCES*********************************/
 .skills-list, .refs-list {
-    color: rgba(255, 255, 255, 0.69); 
+    color: $white-70;
 }
 
 .skill-title, .ref-name {
     color: rgba(255, 255, 255, 0.2);
 }
-
-.github-icon {
-    font-size: 3rem;
-    color: white;
-}
-
-.github-icon:hover {
-    color: #a0f;
-}
-
-.link-block {
-    display: inline-block;
-    padding: 0 5%;
-}
-
-.link-block span {
-    color: rgba(255, 255, 255, 0.2);
-}
-.link-block a {
-    color: white;
-}
-
-.link-block a:hover {
-    color: #a0f;
-}
-
-/*REFERENCES*********************************/
 .ref:first-child {
     margin-bottom: 1rem;
-}
-
-/*ABOUT SECTION *****************************/
-#about {
-    min-height: 100vh;
-
-    .about-intro {
-        color: rgba(255, 255, 255, 0.85);
-    }
-    
-    .about-card {
-        color: rgba(255, 255, 255, 0.85);
-        cursor: pointer;
-        box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.09);
-        -webkit-transition: box-shadow 0.5s;
-        transition: box-shadow 0.5s;
-        -webkit-transition-timing-function: ease-out;
-        transition-timing-function: ease-out;
-    }
-    
-    .about-card:hover {
-        box-shadow: 0px 0px 5px 0px #0f0f0f;
-    }
-    
-    .about-text {
-        color: rgba(255, 255, 255, 0.35);
-    }
-    
-    #short-bio, #long-bio {
-        color: rgba(255, 255, 255, 0.7);
-    }
-    
-    /*BLINKING CURSOR*/
-    .typed-cursor{
-        color: rgba(255, 255, 255, 0.35);
-        opacity: 1;
-        -webkit-animation: blink 0.7s infinite;
-        animation: blink 0.7s infinite;
-    }
-    @keyframes blink{
-        0% { opacity:1; }
-        50% { opacity:0; }
-        100% { opacity:1; }
-    }
-    @-webkit-keyframes blink{
-        0% { opacity:1; }
-        50% { opacity:0; }
-        100% { opacity:1; }
-    }
-}
-
-
-/*CONTACT SECTION*****************************/
-#contact {
-    position: relative;
-
-    .contact-icon {
-            font-size: 4em;
-            color: rgba(255, 255, 255, 0.7);
-            -webkit-transition: color 0.25s ease-out;
-            transition: color 0.25s ease-out;
-        }
-    
-    .contact-block:hover .contact-icon,
-    .contact-block:active .contact-icon {
-        color: #aa00ff;
-    }
-
-    .contact-title {
-        color: rgba(255, 255, 255, 0.12);
-    }
-
-    .contact-info {
-        color: rgba(255, 255, 255, 0.7);
-    }
-
-    .opportunities {
-        font-size: 1em;
-        color: rgba(255, 255, 255, 0.2);
-    }
 }
 
 
@@ -328,7 +280,7 @@ and (max-device-width : 1024px)  {
     /*NAV BAR*/
     a.brand-logo {
         font-family: 'Fugaz One', cursive;
-        color: rgba(255, 255, 255, 0.69);
+        color: $white-70;
         letter-spacing: 5px;
         display: inline-block;
         font-size: 3em;
@@ -351,59 +303,10 @@ and (max-device-width : 1024px)  {
         height: 100px;
     }
     
-    .ion-navicon-round {
-        font-size: 3em;
-        margin: 18px 5px 0 0;
-        color: rgba(255, 255, 255, 0.69);
-    }
-    
-    /*SIDENAV*/
-    .side-nav {
-        width: 50%;    
-    }
-    
-    .side-nav a.btn {
-        height: 20vh;
-        margin: 5%;
-        line-height: 20vh;
-    }
-    
-    .nav a {
-/*        display: block;*/
-        font-size: 3em;
-    }
-
-    .nav-button {
-        color: rgba(255, 255, 255, 0.69);
-    }
-    
-    /*WORK SECTION*/
-    #work .row {
-        margin-top: 8%;
-    }
-    
-    .hover {
-        opacity: 1;
-    }
-    
-    .hover:not(hover) {
-        opacity: 1;
-    }
-    
-    .github-block {
-        margin-left: 10%;
-        margin-top: -5%;
-    }
-    
-    .github-icon {
-        font-size: 3.5rem;
-        color: #a0f;
-    }
-    
     /*CONTACT SECTION*/
 
     .contact-icon {
-        color: #a0f;
+        color: $purple;
     }
     
     .contact-block {
@@ -447,7 +350,7 @@ and (max-device-width : 667px) {
 
     a.brand-logo {
         font-family: 'Fugaz One', cursive;
-        color: rgba(255, 255, 255, 0.69);
+        color: $white-70;
         letter-spacing: 5px;
         display: inline-block;
         margin-top: 0.5%;
@@ -467,12 +370,12 @@ and (max-device-width : 667px) {
     }
     
     .mobile-dot {
-        color: rgba(255, 255, 255, 0.1);
+        color: $white-10;
     }
 
     .ion-navicon-round {
         font-size: 2.25em;
-        color: rgba(255, 255, 255, 0.69);
+        color: $white-70;
     }
     
     /*SIDENAV*/
@@ -492,37 +395,13 @@ and (max-device-width : 667px) {
     }
 
     .nav-button {
-        color: rgba(255, 255, 255, 0.69);
+        color: $white-70;
         
-    }
-    
-    /*WORK SECTION*/
-    .hover {
-        opacity: 1;
-    }
-    
-    .hover:not(hover) {
-        opacity: 1;
-    }
-    
-    .github-icon {
-        color: #a0f;
-    }
-    
-    /*ABOUT SECTION*/
-    
-    .about-intro {
-        line-height: normal;
-        font-size: .75em;
-    }
-    
-    .bio-buttons {
-        margin-bottom: 0;
     }
     
     /*CONTACT SECTION*/
     .contact-icon {
-        color: #a0f;
+        color: $purple;
     }
     
     .contact-title {

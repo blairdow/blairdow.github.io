@@ -27,30 +27,115 @@
 </head>
 
 <body class="blue-grey darken-3">  
- 
-  <header>
-    <!--NAV   -->
-    <div class="navbar-fixed">
+    
+<header>
+  <div class="navbar-fixed">
     <nav class="blue-grey darken-1">
       <div class="nav-wrapper">
         <a class='brand-logo left'><img src="src/assets/img/bd_twitter.jpg" alt="avatar" class='left img-responsive avatar'>BLAIR DOWIS<span class='title hide-on-small-only'>
             FRONT-END ENGINEER
         </span></a>
         
-        <!--MOBILE NAV hamburger button-->
-        <a href="#" data-target="slide-out" class="sidenav-trigger right"><i class="ion-navicon-round"></i></a>
-        
         <!--FULL SCREEN NAV BAR-->
         <ul class="right hide-on-med-and-down fullscreen-nav">
-          <li class='nav-item'><a class="nav-button btn purple accent-4 modal-trigger" href="#contact-modal">CONTACT</a></li>
+          <li class='nav-item'><a id="contact-button" class="nav-button btn purple accent-4">CONTACT</a></li>
         </ul>
       </div>
     </nav>
   </div>      
   <!--MOBILE SIDE NAV      -->
   <ul class="sidenav blue-grey darken-1" id="slide-out">
-      <li class='nav-item js--mobile-contact-open'><a class="nav-button btn purple accent-4" href="#">CONTACT</a></li>
+      <li class='nav-item'><a class="nav-button btn purple accent-4" href="#">CONTACT</a></li>
   </ul>
+
+    <!-- Mobile menu, show/hide functionality in src/index.js toggles hidden class to block-->
+  <div class="hex-hero-clip animate-rotate-in hidden" id="modal">
+    <div class="hex-hero-clip content blue-grey darken-1">
+        <button type="button" id="close-button" class="right">
+          <svg id="close-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#ffffffb3" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <div class="modal-content">
+            <div class="row">
+                <div class="col l6 center contact-block">
+                    <a href="mailto:blairdow@gmail.com"><i class="ion-ios-compose-outline contact-icon"></i>
+                    <p class='contact-info'>blairdow@gmail.com</p></a>
+                </div>
+                <div class="col l6 center contact-block">
+                    <a href="tel:1-707-337-8033"><i class="ion-iphone contact-icon"></i>
+                    <p class='contact-info'>707.337.8033</p></a>
+                </div>
+                <div class="col l6 center contact-block">
+                <a href="https://github.com/blairdow" target="_blank"><i class="ion-social-github-outline contact-icon"></i>
+                    <p class='contact-info'>github.com/blairdow</p></a>
+                </div>
+                <div class="col l6 center contact-block">
+                    <a href="https://www.linkedin.com/in/blairdow" target="_blank"><i class="ion-social-linkedin-outline contact-icon"></i>
+                    <p class='contact-info'>linkedin.com/in/blairdow</p></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m10 offset-m1">
+                    <p class='text-white'>
+                        I am available for full-time work, contract positions, or freelance projects in the LA area or remotely. Especially interested in CSS/design system heavy positions. Also interested in any and all pet-sitting opportunities.
+                    </p>
+                </div>
+            </div>
+            <div class="resume center">
+                <a href='src/assets/img/BlairDowisResume2020.pdf' class="btn-large nav-button purple accent-4"><i class="ion-ios-paper-outline material-icons left"></i>My Resume</a>
+            </div>
+        </div>
+        <!-- <div class="menu-content">
+            <div class="contact-block">
+                <a href="mailto:blairdow@gmail.com"><i class="ion-ios-compose-outline contact-icon"></i>
+                <p class='contact-info'>blairdow@gmail.com</p></a>
+            </div>
+            <div class="contact-block">
+                <a href="tel:1-707-337-8033"><i class="ion-iphone contact-icon"></i>
+                <p class='contact-info'>707.337.8033</p></a>
+            </div>
+            <div class="contact-block">
+                <a href="https://github.com/blairdow" target="_blank"><i class="ion-social-github-outline contact-icon"></i>
+                <p class='contact-info'>github.com/blairdow</p></a>
+            </div>
+            <div class="contact-block">
+                <a href="https://www.linkedin.com/in/blairdow" target="_blank"><i class="ion-social-linkedin-outline contact-icon"></i>
+                <p class='contact-info'>linkedin.com/in/blairdow</p></a>
+            </div>
+            <div class="contact-block opportunities right">
+                <p class='text-white'>
+                    I am available for full-time work, contract positions, or freelance projects in the LA area or remotely. Especially interested in CSS/design system heavy positions. Also interested in any and all pet-sitting opportunities.
+                </p>
+            </div>
+            <div class="contact-block resume">
+                <a href='src/assets/img/BlairDowisResume2020.pdf' class="btn-large nav-button purple accent-4"><i class="ion-ios-paper-outline material-icons left"></i>My Resume</a>
+            </div>
+      </div> -->
+    </div>
+  </div>
+      <!-- clip path mobile hex menu -->
+    <svg xmlns="http://www.w3.org/2000/svg" height="0" width="0"  viewBox="0 0 261.03 730.98" class="hex-svg">
+    <defs>
+        <clipPath id="hex-mobile-menu" clipPathUnits="objectBoundingBox" transform="scale(0.00383098 0.00136803)">
+        <path d="M182,.1c25,0,50,.09,75-.1,3.43,0,4.1.68,4.1,4.1q-.19,126.74-.1,253.46V731c-1.25-.45-2.52-.84-3.74-1.36-52-22.29-104.26-44.11-156-67.08C71.3,649.26,52.48,625.46,48.05,593c-8.23-60.4-14.84-121-22.09-181.55-5.19-43.34-10.86-86.62-15.34-130-3.83-37-11.94-73.7-10.44-111.24l.52-2.2c.57-2.26,1.56-4.43,1.34-6.84l.19-1.32c1.81-2.61,2.26-5.69,2.95-8.68a3.31,3.31,0,0,0,1-2.67,2.51,2.51,0,0,0,1-2.34l1-2.31a4,4,0,0,0,1.4-2.7l.49-.92a7,7,0,0,0,2.33-4.08L21.05,124a5.34,5.34,0,0,0,2.54-2.87L37,108.83l2.25-1.68c1-.6,2-1.13,2.94-1.82q54.1-40.48,108.15-81C161,16.29,172,8.88,182,.1Z" fill="#64bb5f"/>
+        </clipPath>
+    </defs>
+    </svg>
+    <!-- end clip path -->
+
+    <!-- clip paths -->
+    <svg id="Layer_1" height="0" width="0" viewBox="0 0 763.46 772.75" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <clipPath id="hex-hero" clipPathUnits="objectBoundingBox" transform="scale(0.0013098 0.00129408)">
+        <path d="M675.68,153.72q289.68,0,579.36-.1c3.75,0,4.59.85,4.59,4.6q-.15,283.68-.09,567.36a36.54,36.54,0,0,0-3.36,2q-65.19,48.78-130.35,97.6c-38.13,28.53-76,57.42-114.54,85.38-22,16-47.15,19.68-73.24,11.76-19.12-5.81-37-15-55.31-22.88Q737.06,837.19,591.52,774.58c-28.71-12.41-46.47-34.79-50.69-65.79C533.69,656.34,528,603.7,521.69,551.14q-10.82-90.24-21.52-180.51c-1.62-13.87-4.48-27.7-3.93-41.73,1.13-28.63,13.84-51.17,36.74-68.27Q604.41,207.29,675.68,153.72Z" transform="translate(-496.17 -153.62)" fill="#64bb5f"/>
+        </clipPath>
+    </defs>
+    </svg>
+
+    <!-- white fullpage overlay for mobile menu -->
+    <div id="modal-overlay" class="animate-fade-in"></div>
+    <!--NAV   -->
 </header>
   
 <!--BODY CONTAINER-->
@@ -60,7 +145,7 @@
     <h1>HI THERE!<br />I'M BLAIR</h1>
     <p class="flow-text text-white">If you're reading this, I probably applied to a position that you are looking to fill. How exciting for us to be on this journey together! (Just kidding, I'm normal.)</p> 
     
-    <p class="flow-text text-white">I'm a front-end engineer who has been working full time in the industry <span class="purple accent-4 emphasis">since 2017</span>. I have a <span class="purple accent-4 emphasis">deep love for CSS</span>, a love/hate relationship with JavaScript, and also know enough back-end PHP/Laravel to be only mildly dangerous to your codebase. As a <span class="purple accent-4 emphasis">former designer</span>, I love working closely with them, and am able to speak their language and understand design files in a way that eludes many other engineers out there. Want your designers to fall in love with your new hire? It me.</p>
+    <p class="flow-text text-white">I'm a front-end engineer who has been working full time in the industry <span class="purple accent-4 emphasis">since 2017</span>. I have a <span class="purple accent-4 emphasis">deep love for CSS</span>, a love/hate relationship with JavaScript, and also know enough back-end PHP/Laravel to be only mildly dangerous to your codebase. As a <span class="purple accent-4 emphasis">former designer</span>, I love working closely with them, and am able to speak their language and understand design files in a way that eludes many other engineers out there.</p>
 
     <p class="flow-text text-white">
         When I'm not meticulously arranging my stylesheets, I like <span class="purple accent-4 emphasis">rock climbing</span> (indoors and out), going to shows, generally enjoying the Southern California nature and weather, and hanging out with my cat. 
@@ -69,7 +154,7 @@
     <div class='center'>
         <span class="dot large">&bull; &bull; &bull; </span>
     </div>
-    
+    <h1>CASE STUDY</h1>
     <p class="flow-text text-white">In 2016, when I was just a baby engineer, I built a clone of the <span class="purple accent-4 emphasis">classic Nokia game, Snake,</span> with an 8-bit spin. I thought it would be a fun challenge to <span class="purple accent-4 emphasis">refactor</span> it, and also a good way to show off how my skills have improved in the last 7 years. My original version was pretty good for someone who was semi-new to coding, but there were definitely improvements to be made. (When are there not?)</p>
 
     <p class="flow-text text-white">The <span class="purple accent-4 emphasis">main changes</span> were: 
@@ -83,78 +168,43 @@
   </div>
 
   <div class="container">
-    
-    <!--ABOUT SECTION-->
-    <div id="about" class='section js--section-about about-trigger' style='display:none;'>
-        <h1 class='center'>ABOUT</h1>
-        <div class="row">
-            <div class="col s12">
-
-        <!--typed headline-->
-               <div id="typed-strings" style='display:none;'>
-                    <h3>Hi there! ^1000 I’m Blair. ^2000 <br>You may be wondering how I ended up as a front end developer… </h3>
-                </div>
-                <h3 class='center'><span id="typed" class='about-intro purple accent-4'></span></h3>
-            </div>
-        </div> 
-  
-        
-    <!--LONG BIO-->
-        <div class="row">
-            <div class="col s12">
-                <div id="long-bio">
-                    <p class='flow-text about-text'>I studied Art History and Business at UCSD, and eventually became a <span class='purple accent-4 emphasis'>graphic designer and social media professional</span> in the fashion industry in DTLA. I was always interested in coding, ever since I started tinkering around with HTML and CSS back in the Myspace days. I took some Computer Science classes in college, in 2015 I started teaching myself how to code. I focused mostly on <span class='purple accent-4 emphasis'>HTML, CSS, JS/jQuery and responsive design techniques</span> , with a little bit of PHP as well.</p>
-
-                    <p class='flow-text about-text'>Eventually, I decided I was ready to take a leap, and quit my job to do a fulltime bootcamp in 2016. I have been employed full time as a front end developer since I completed that program. I'm currently working for a small startup <span class="purple accent-4 emphasis">writing mostly Angular, Vue, and a little bit of Laravel/PHP</span> as needed for our web app. I also have professional experience building Wordpress sites for a busy digital marketing agency in West Hollywood. For my next career move, I hope to find a position that is in the <span class="purple accent-4 emphasis">CSS/design system space</span>.</p>
-      
-                    <p class='flow-text about-text'>Coding combines my love for good design, building things, being creative, solving problems, and drinking way too much coffee in ways I never imagined! <span class="purple accent-4 emphasis">I can’t wait to find my home on a dev team near you. I’m also available for freelance or contract work remotely, or in the LA area.</span> </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
 <!--contact section-->
-    <div id="contact-modal" class="modal">
+    <div id="contact-modal" class="modal blue-grey darken-3">
         <div class="modal-content">
-        <h4>CONTACT</h4>    
-        <div id="contact" class='section js--section-contact'>
-            <div class="row">
-                <div class="col s10 offset-s1 m5 offset-m1 l3 center contact-block">
-                    <a href="mailto:blairdow@gmail.com"><i class="ion-ios-compose-outline contact-icon"></i>
-                    <h4 class='contact-title'>EMAIL</h4><p class='contact-info'>blairdow@gmail.com</p></a>
+            <div id="contact">
+                <div class="row">
+                    <div class="col s10 offset-s1 m5 offset-m1 l3 center contact-block">
+                        <a href="mailto:blairdow@gmail.com"><i class="ion-ios-compose-outline contact-icon"></i>
+                        <p class='contact-info'>blairdow@gmail.com</p></a>
+                    </div>
+                    <div class="col s10 offset-s1 m5 l3 center contact-block">
+                        <a href="tel:1-707-337-8033"><i class="ion-iphone contact-icon"></i></a>
+                        
+                        <p class='contact-info'>707.337.8033</p>
+                    </div>
+                    <div class="col s10 offset-s1 m5 offset-m1 l3 center contact-block">
+                    <a href="https://github.com/blairdow" target="_blank"><i class="ion-social-github-outline contact-icon"></i>
+                        <p class='contact-info'>github.com/blairdow</p></a>
+                    </div>
+                    <div class="col s10 offset-s1 m5 l3 center contact-block">
+                        <a href="https://www.linkedin.com/in/blairdow" target="_blank"><i class="ion-social-linkedin-outline contact-icon"></i>
+                        <p class='contact-info'>linkedin.com/in/blairdow</p></a>
+                    </div>
                 </div>
-                <div class="col s10 offset-s1 m5 l3 center contact-block">
-                    <a href="tel:1-707-337-8033"><i class="ion-iphone contact-icon"></i></a>
-                    <h4 class="contact-title">PHONE</h4>
-                    <p class='contact-info'>707.337.8033</p>
-                </div>
-                <div class="col s10 offset-s1 m5 offset-m1 l3 center contact-block">
-                <a href="https://github.com/blairdow" target="_blank"><i class="ion-social-github-outline contact-icon"></i>
-                    <h4 class="contact-title">GITHUB</h4><p class='contact-info'>github.com/blairdow</p></a>
-                </div>
-                <div class="col s10 offset-s1 m5 l3 center contact-block">
-                    <a href="https://www.linkedin.com/in/blairdow" target="_blank"><i class="ion-social-linkedin-outline contact-icon"></i>
-                    <h4 class="contact-title">LINKEDIN</h4><p class='contact-info'>linkedin.com/in/blairdow</p></a>
-                </div>
-            </div>
-            <div class="row opportunities">
-                <div class="col s12 m10 offset-m1 center">
-                    <p class='flow-text'>
-                        I am available for full-time work, contract positions, or freelance projects in the LA area or remotely. Especially interested in CSS/design system heavy positions. Also interested in any and all pet-sitting opportunities.
-                    </p>
-                </div>
-                <div class="col s12 center">
-                    <div class="resume">
-                        <a href='assets/BlairDowisResume2020.pdf' class="btn-large nav-button purple accent-4"><i class="ion-ios-paper-outline material-icons left"></i>View/Download my resume</a>
+                <div class="row opportunities">
+                    <div class="col s12 m10 offset-m1 center">
+                        <p class='flow-text text-white'>
+                            I am available for full-time work, contract positions, or freelance projects in the LA area or remotely. Especially interested in CSS/design system heavy positions. Also interested in any and all pet-sitting opportunities.
+                        </p>
+                    </div>
+                    <div class="col s12 center">
+                        <div class="resume">
+                            <a href='src/assets/img/BlairDowisResume2020.pdf' class="btn-large nav-button purple accent-4"><i class="ion-ios-paper-outline material-icons left"></i>View/Download my resume</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
   </div>
 
     
