@@ -1,23 +1,7 @@
-// materialize.cs event listeners
-document.addEventListener('DOMContentLoaded', function() {
-    //side navigation for nav bar on mobile
-    let elems = document.querySelectorAll('.sidenav');
-    let options = {
-        edge: 'right'
-    }
-    let instances = M.Sidenav.init(elems, options);
-    
-    //contact modal
-    let modals = document.querySelectorAll('.modal');
-    let modalOptions = {
-        endingTop: 0,
-    }
-    let modalInstances = M.Modal.init(modals, modalOptions);
-});
-
 ///////////////////////////////
 // MOBILE NAV MENU ANIMATION
 //////////////////////////////
+const body = document.body
 const openButton = document.getElementById('contact-button');
 const closeButton = document.getElementById('close-button');
 const modalEl = document.getElementById('modal')
@@ -43,12 +27,13 @@ openButton.onclick = (event) => {
     //menu is closed, this openButtons animate-in
     // toggleClass([openSvg, closeSvg], 'hidden')
     toggleClass([modalEl, overlay], 'hidden')
+    body.classList.add('modal-open')
 }
 
 closeButton.onclick = (event) => {
     //menu is open, adding class openButtons animate-out 
    if(!(modalEl.classList.contains('hidden'))) {
-        closeNav()
+      closeNav()
     }
 }
 
@@ -68,6 +53,8 @@ function closeNav() {
 //   toggleClass([openSvg, closeSvg], 'hidden')
   modalEl.classList.add('animate-rotate-out')
   overlay.classList.add('animate-fade-out-delay')
+  body.classList.remove('modal-open')
+
 }
 
 function toggleClass(elArray, className) {

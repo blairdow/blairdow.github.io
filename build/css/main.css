@@ -8047,17 +8047,15 @@ input[type=range]::-ms-thumb {
   }
 }
 body {
-  font-family: "Lato", cursive;
+  font-family: "Lato", sans-serif;
   font-weight: 300;
   letter-spacing: 0.5px;
   font-size: 16px;
 }
+body.modal-open {
+  overflow-y: hidden;
+}
 
-/*
-font-family: 'Coda', cursive;
-font-family: 'Fugaz One', cursive;
-font-family: 'Bungee Shade', cursive;
-*/
 .text-white {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -8071,7 +8069,6 @@ font-family: 'Bungee Shade', cursive;
 }
 
 .emphasis {
-  font-weight: 800;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -8084,9 +8081,18 @@ font-family: 'Bungee Shade', cursive;
 }
 
 h1 {
-  font-family: "Fugaz One", cursive;
+  font-family: "Fugaz One", sans-serif;
   color: rgba(255, 255, 255, 0.1);
   letter-spacing: 10px;
+}
+
+a.link {
+  color: #aa00ff;
+  transition: color 0.3s ease-out, font-weight 0.3s ease-out, background-color 0.3s ease-out;
+}
+a.link:hover {
+  background: #aa00ff !important;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .dot {
@@ -8107,13 +8113,13 @@ nav .avatar {
   margin: 7px 15px auto 10px;
 }
 nav span.title, nav span.mobile-title {
-  font-family: "Lato", cursive;
+  font-family: "Lato", sans-serif;
   font-size: 0.75em;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.15);
 }
 nav a {
-  font-family: "Fugaz One", cursive;
+  font-family: "Fugaz One", sans-serif;
   letter-spacing: 2px;
 }
 nav a.brand-logo {
@@ -8182,23 +8188,18 @@ nav a.brand-logo {
   animation: fadeOut 300ms ease-out 300ms forwards;
 }
 
-/*CONTACT MODAL*********************************/
-.hex-mobile-menu-clip {
-  clip-path: url(#hex-mobile-menu);
-}
-
+/*CONTACT HEX MODAL*********************************/
 .hex-hero-clip {
   clip-path: url(#hex-hero);
 }
 
 #modal-overlay {
-  background-color: rgba(255, 255, 255, 0.5);
-  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  height: 100vh;
-  display: none;
+  bottom: 0;
   z-index: 30;
 }
 
@@ -8206,7 +8207,7 @@ nav a.brand-logo {
   padding: 0.5rem;
   background: rgba(0, 0, 0, 0.1);
   transform-origin: top right;
-  position: absolute;
+  position: fixed;
   right: -0.5rem;
   top: -0.5rem;
   z-index: 1000;
@@ -8232,8 +8233,21 @@ nav a.brand-logo {
   width: 2rem;
 }
 #modal .modal-content {
-  padding: 4rem 1.5rem 6.5rem 4rem;
+  padding: 4rem 2.75rem 6.5rem 4rem;
   text-align: center;
+}
+#modal .modal-content .grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 1rem;
+}
+#modal .modal-content .contact-block {
+  min-height: 100%;
+  margin-bottom: 0.75rem;
+}
+#modal .modal-content .contact-block.resume {
+  margin-top: 3.5rem;
 }
 #modal .modal-content .contact-icon {
   font-size: 4rem;
@@ -8243,22 +8257,14 @@ nav a.brand-logo {
   position: relative;
   top: 11px;
 }
-#modal .modal-content .contact-block {
-  margin-top: 0.75rem;
-}
-#modal .modal-content .contact-block.resume {
-  margin-top: 3.5rem;
-}
-#modal .modal-content .contact-block:hover .contact-icon,
-#modal .modal-content .contact-block:active .contact-icon {
+#modal .modal-content .contact-block:hover .contact-icon, #modal .modal-content .contact-block:active .contact-icon {
   color: #aa00ff;
 }
-#modal .modal-content .contact-block:hover .contact-info,
-#modal .modal-content .contact-block:active .contact-info {
+#modal .modal-content .contact-block:hover .contact-info, #modal .modal-content .contact-block:active .contact-info {
   color: rgba(255, 255, 255, 0.5);
 }
 #modal .modal-content .contact-title {
-  font-family: "Fugaz One", cursive;
+  font-family: "Fugaz One", sans-serif;
   color: rgba(255, 255, 255, 0.1);
   letter-spacing: 10px;
 }
@@ -8267,17 +8273,17 @@ nav a.brand-logo {
   margin: 0 auto 0 0.5rem;
 }
 
-.nav-button {
-  -webkit-transition: box-shadow 0.5s ease-out, text-shadow 0.5s ease-out;
-  transition: box-shadow 0.5s ease-out, text-shadow 0.5s ease-out;
+.btn-default {
+  -webkit-transition: box-shadow 0.3s ease-out, text-shadow 0.3s ease-out;
+  transition: box-shadow 0.3s ease-out, text-shadow 0.3s ease-out;
   color: rgba(255, 255, 255, 0.7);
 }
-.nav-button.btn, .nav-button.btn-large, .nav-button.btn-small {
+.btn-default.btn, .btn-default.btn-large, .btn-default.btn-small {
   padding: 0 2rem;
   font-size: 15px;
   letter-spacing: 2px;
 }
-.nav-button:hover {
+.btn-default:hover {
   text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.46);
   box-shadow: 0px 0px 5px black;
 }
@@ -8304,7 +8310,7 @@ nav a.brand-logo {
   }
   /*NAV BAR*/
   a.brand-logo {
-    font-family: "Fugaz One", cursive;
+    font-family: "Fugaz One", sans-serif;
     color: rgba(255, 255, 255, 0.7);
     letter-spacing: 5px;
     display: inline-block;
@@ -8355,7 +8361,7 @@ nav a.brand-logo {
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   /*NAV BAR*/
   a.brand-logo {
-    font-family: "Fugaz One", cursive;
+    font-family: "Fugaz One", sans-serif;
     color: rgba(255, 255, 255, 0.7);
     letter-spacing: 5px;
     display: inline-block;
@@ -8392,7 +8398,7 @@ nav a.brand-logo {
     display: block;
     font-size: 2em;
   }
-  .nav-button {
+  .btn-default {
     color: rgba(255, 255, 255, 0.7);
   }
   /*CONTACT SECTION*/

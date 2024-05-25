@@ -9,7 +9,9 @@
   <!--google verification-->
   <meta name="google-site-verification" content="ic-MF7Jgg1QFJ4wjrVyBReXx03aBRLm-rluLZ9XmYeI" />
   
-  <link href="https://fonts.googleapis.com/css?family=Lato:300|Coda|Fugaz+One" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lato:wght@300;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="build/css/main.css">
   
@@ -38,15 +40,11 @@
         
         <!--FULL SCREEN NAV BAR-->
         <ul class="right hide-on-med-and-down fullscreen-nav">
-          <li class='nav-item'><a id="contact-button" class="nav-button btn purple accent-4">CONTACT</a></li>
+          <li class='nav-item'><a id="contact-button" class="btn-default btn purple accent-4">CONTACT</a></li>
         </ul>
       </div>
     </nav>
   </div>      
-  <!--MOBILE SIDE NAV      -->
-  <ul class="sidenav blue-grey darken-1" id="slide-out">
-      <li class='nav-item'><a class="nav-button btn purple accent-4" href="#">CONTACT</a></li>
-  </ul>
 
     <!-- Mobile menu, show/hide functionality in src/index.js toggles hidden class to block-->
   <div class="hex-hero-clip animate-rotate-in hidden" id="modal">
@@ -57,20 +55,20 @@
           </svg>
         </button>
         <div class="modal-content">
-            <div class="row">
-                <div class="col l6 center contact-block">
-                    <a href="mailto:blairdow@gmail.com"><i class="ion-ios-compose-outline contact-icon"></i>
+            <div class="grid">
+                <div class="center contact-block">
+                    <a href="mailto:blairdow@gmail.com" target="_blank"><i class="ion-ios-compose-outline contact-icon"></i>
                     <p class='contact-info'>blairdow@gmail.com</p></a>
                 </div>
-                <div class="col l6 center contact-block">
+                <div class="center contact-block">
                     <a href="tel:1-707-337-8033"><i class="ion-iphone contact-icon"></i>
                     <p class='contact-info'>707.337.8033</p></a>
                 </div>
-                <div class="col l6 center contact-block">
+                <div class="center contact-block">
                 <a href="https://github.com/blairdow" target="_blank"><i class="ion-social-github-outline contact-icon"></i>
                     <p class='contact-info'>github.com/blairdow</p></a>
                 </div>
-                <div class="col l6 center contact-block">
+                <div class="center contact-block">
                     <a href="https://www.linkedin.com/in/blairdow" target="_blank"><i class="ion-social-linkedin-outline contact-icon"></i>
                     <p class='contact-info'>linkedin.com/in/blairdow</p></a>
                 </div>
@@ -83,7 +81,7 @@
                 </div>
             </div>
             <div class="resume center">
-                <a href='src/assets/img/BlairDowisResume2020.pdf' class="btn-large nav-button purple accent-4"><i class="ion-ios-paper-outline material-icons left"></i>My Resume</a>
+                <a href='src/assets/img/BlairDowisResume2020.pdf' class="btn-large btn-default purple accent-4"><i class="ion-ios-paper-outline material-icons left"></i>My Resume</a>
             </div>
         </div>
     </div>
@@ -110,25 +108,34 @@
     <h1>HI THERE!<br />I'M BLAIR</h1>
     <p class="flow-text text-white">If you're reading this, I probably applied to a position that you are looking to fill. How exciting for us to be on this journey together! (Just kidding, I'm normal.)</p> 
     
-    <p class="flow-text text-white">I'm a front-end engineer who has been working full time in the industry <span class="purple accent-4 emphasis">since 2017</span>. I have a <span class="purple accent-4 emphasis">deep love for CSS</span>, a love/hate relationship with JavaScript, and also know enough back-end PHP/Laravel to be only mildly dangerous to your codebase. As a <span class="purple accent-4 emphasis">former designer</span>, I love working closely with them, and am able to speak their language and understand design files in a way that eludes many other engineers out there.</p>
+    <p class="flow-text text-white">I'm a front-end engineer who has been working full time in the industry <span class="purple accent-4 emphasis">since 2017</span>. I have a <span class="purple accent-4 emphasis">deep love for CSS</span>, a love/hate relationship with JavaScript and it's various frameworks (don't we all?), and also know enough back-end PHP/Laravel to be only mildly dangerous to your codebase. As a <span class="purple accent-4 emphasis">former designer</span>, I love working closely with them, and am able to speak their language and understand design files in a way that eludes many other engineers out there.</p>
 
     <p class="flow-text text-white">
         When I'm not meticulously arranging my stylesheets, I like <span class="purple accent-4 emphasis">rock climbing</span> (indoors and out), going to shows, generally enjoying the Southern California nature and weather, and hanging out with my cat. 
+    </p>
+
+    <p class="center">
+      <a href='src/assets/img/BlairDowisResume2020.pdf' class="btn-large btn-default purple accent-4"><i class="ion-ios-paper-outline material-icons left"></i>Here's My Resume</a>
     </p>
 
     <div class='center'>
         <span class="dot large">&bull; &bull; &bull; </span>
     </div>
     <h1>CASE STUDY</h1>
-    <p class="flow-text text-white">In 2016, when I was just a baby engineer, I built a clone of the <span class="purple accent-4 emphasis">classic Nokia game, Snake,</span> with an 8-bit spin. I thought it would be a fun challenge to <span class="purple accent-4 emphasis">refactor</span> it, and also a good way to show off how my skills have improved in the last 7 years. My original version was pretty good for someone who was semi-new to coding, but there were definitely improvements to be made. (When are there not?)</p>
+    <p class="flow-text text-white">In 2016, when I was just a baby engineer, I built a clone of the <span class="purple accent-4 emphasis">classic Nokia game, Snake,</span> with an 8-bit spin. I thought it would be a fun challenge to <span class="purple accent-4 emphasis">refactor</span> it, and also a good way to show off how my skills have improved in the last 8 years in the industry. My original version was pretty good for someone who was semi-new to coding, but there were definitely improvements to be made. (When are there not?)</p>
 
     <p class="flow-text text-white">The <span class="purple accent-4 emphasis">main changes</span> were: 
       <ul class="browser-default text-white flow-text">
-        <li class="my-10">Rewriting the project in Vanilla JS so I could remove jQuery</li>
+        <li class="my-10">Rewriting the project in Vanilla JS/removing jQuery</li>
         <li class="my-10">Actually making it work on mobile (ironically my original version only worked on desktop due to it using the arrow keys)</li>
-        <li class="my-10">Adding Webpack (definitely overkill for this game, but good practice) </li>
+        <li class="my-10">Adding Webpack (definitely overkill for a single page game, but good practice) </li>
         <li class="my-10">Adding Tailwind.css (not everyone's favorite way to CSS, but for me the benefits outweigh the drawbacks)</li>
+        <li class="my-10">Adding new features to the game itself like a High Score tracker!</li>
       </ul>
+    </p>
+
+    <p class="flow-text text-white">
+      <a href="https://blairdow.github.io/blair-snake/" target="_blank" class="link">Click here</a> to play my version of Snake now, or read on for a more detailed overview of my refactor process. 
     </p>
 
     
@@ -145,9 +152,8 @@
                     <li><span class="skill-title">Languages: </span>HTML, CSS/SaSS, Javascript/Typescript, PHP</li>
                     <li><span class='skill-title'>Front-end: </span>Angular, Vue, React, Tailwind, Webpack, jQuery</li>
                     <li><span class='skill-title'>Back-end: </span>Node.js + Express, Laravel</li>
-                    <li><span class='skill-title'>Mobile: </span>Ionic (iOS/Android framework)</li>
                     <li><span class='skill-title'>Databases: </span>MYSQL, PostgreSQL, MongoDB</li>
-                    <li><span class='skill-title'>Workflow: </span>Github, Jira, Asana, Trello</li>
+                    <li><span class='skill-title'>Workflow: </span>Github, Bitbucket, Jira, Asana, Trello</li>
                     <li><span class='skill-title'>Design: </span>Adobe Creative Suite, Canva, Wire-Framing</li>
                 </ul>
         </div>
