@@ -1,282 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>Blair Dowis</title>
-    
-    <!--google verification-->
-    <meta name="google-site-verification" content="ic-MF7Jgg1QFJ4wjrVyBReXx03aBRLm-rluLZ9XmYeI" />
-    
-    <link href="https://fonts.googleapis.com/css?family=Lato:300|Coda|Fugaz+One" rel="stylesheet">
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    
-    <!--FAVICON-->
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Blair Dowis</title>
+  
+  <!--google verification-->
+  <meta name="google-site-verification" content="ic-MF7Jgg1QFJ4wjrVyBReXx03aBRLm-rluLZ9XmYeI" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lato:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="build/css/main.css">
+  
+  <!--FAVICON-->
+  <link rel="shortcut icon" href="src/assets/img/favicon.ico" type="image/x-icon">
 
-    <!--SEO PROPS-->
-    <meta name='description' content='Blair Dowis | Full Stack and Front End Developer | HTML, CSS, Javascript, Node, Angular, Ruby on Rails, Ionic for iOS mobile'>
+  <!--SEO PROPS-->
+  <meta name='description' content='Blair Dowis | Full Stack and Front End Developer | HTML, CSS, Javascript, Node, Angular, Ruby on Rails, Ionic for iOS mobile'>
 
-    <meta property='og:url' content="https://blairdow.github.io">
-    <meta property='og:title' content="Blair Dowis | Full Stack Developer">
-    <meta property='og:description' content="HTML/CSS, Javascript/jQuery, Ajax, Angular, JSON + 3rd-party API interfacing, Node.js + Express, Ionic mobile, Ruby on Rails, Responsive Web Design, Adobe Creative Suite">
-    <meta property='og:image' content="https://blairdow.github.io/assets/bd_twitter.jpg">
+  <meta property='og:url' content="https://blairdow.github.io">
+  <meta property='og:title' content="Blair Dowis | Full Stack Developer">
+  <meta property='og:description' content="HTML/CSS, Javascript/jQuery, Ajax, Angular, JSON + 3rd-party API interfacing, Node.js + Express, Ionic mobile, Ruby on Rails, Responsive Web Design, Adobe Creative Suite">
+  <meta property='og:image' content="https://blairdow.github.io/assets/bd_twitter.jpg">
    
 </head>
 
 <body class="blue-grey darken-3">  
- 
+    
 <header>
+  <div class="navbar-fixed">
+    <nav class="blue-grey darken-1">
+      <div class="nav-wrapper">
+        <a class='brand-logo left'><img src="src/assets/img/bd_twitter.jpg" alt="avatar" class='left img-responsive avatar'>BLAIR DOWIS<span class='title hide-on-small-only'>
+            FRONT-END ENGINEER
+        </span></a>
+        
+        <!--FULL SCREEN NAV BAR-->
+        <ul class="right hide-on-med-and-down fullscreen-nav">
+          <li class='nav-item'><a id="contact-button" class="btn-default btn purple accent-4">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>      
 
-<div class="navbar-fixed">
-  <!--NAV   -->
-  <nav class="blue-grey darken-1">
-    <div class="nav-wrapper">
-        <div class="nav-title">
-           <img src="assets/bd_twitter.jpg" alt="avatar" class='brand-logo left img-responsive avatar'>
-            <a class='brand-logo left'>BLAIR DOWIS<span class='title hide-on-small-only'>
-              FULL STACK DEV
-          </span></a>
+    <!-- Mobile menu, show/hide functionality in src/index.js toggles hidden class to block-->
+  <div class="hex-hero-clip animate-rotate-in hidden" id="modal">
+    <div class="hex-hero-clip content blue-grey darken-1">
+        <button type="button" id="close-button" class="right">
+          <svg id="close-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#ffffffb3" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <div class="modal-content">
+            <div class="grid">
+                <div class="center contact-block">
+                    <a href="mailto:blairdow@gmail.com" target="_blank"><i class="ion-ios-compose-outline contact-icon"></i>
+                    <p class='contact-info'>blairdow@gmail.com</p></a>
+                </div>
+                <div class="center contact-block">
+                    <a href="tel:1-707-337-8033"><i class="ion-iphone contact-icon"></i>
+                    <p class='contact-info'>707.337.8033</p></a>
+                </div>
+                <div class="center contact-block">
+                <a href="https://github.com/blairdow" target="_blank"><i class="ion-social-github-outline contact-icon"></i>
+                    <p class='contact-info'>github.com/blairdow</p></a>
+                </div>
+                <div class="center contact-block">
+                    <a href="https://www.linkedin.com/in/blairdow" target="_blank"><i class="ion-social-linkedin-outline contact-icon"></i>
+                    <p class='contact-info'>linkedin.com/in/blairdow</p></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m10 offset-m1">
+                    <p class='text-white'>
+                        I am available for full-time work, contract positions, or freelance projects in the LA area or remotely. Especially interested in CSS/design system heavy positions. Also interested in any and all pet-sitting opportunities.
+                    </p>
+                </div>
+            </div>
+            <div class="resume center">
+                <a href='src/assets/img/BlairDowisResume2020.pdf' class="btn-large btn-default purple accent-4"><i class="ion-ios-paper-outline material-icons left"></i>My Resume</a>
+            </div>
         </div>
-      
-<!--MOBILE NAV hamburger button-->
-      <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="ion-navicon-round"></i></a>
-
-<!--MOBILE SIDE NAV      -->
-      <ul class="side-nav blue-grey darken-1" id="mobile-demo">
-        <li class='nav js--mobile-work-open'><a class="nav-button btn purple accent-4">WORK</a></li>
-        <li class='nav js--mobile-about-open'><a class="nav-button btn purple accent-4" href="#">ABOUT</a></li>
-        <li class='nav js--mobile-contact-open'><a class="nav-button btn purple accent-4" href="#">CONTACT</a></li>
-      </ul>
-      
-<!--FULL SCREEN NAV BAR-->
-      <ul class="right hide-on-med-and-down fullscreen-nav">
-        <li class='nav js--work-slide'><a class="nav-button btn purple accent-4" href="#">WORK</a></li>
-        <li class='nav js--about-slide'><a class="nav-button btn purple accent-4" href="#">ABOUT</a></li>
-        <li class='nav js--contact-slide'><a class="nav-button btn purple accent-4" href="#">CONTACT</a></li>
-      </ul>
-
     </div>
-  </nav>
-     
-</div>
+  </div>
+
+    <!-- clip path for hex modal -->
+    <svg id="Layer_1" height="0" width="0" viewBox="0 0 763.46 772.75" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <clipPath id="hex-hero" clipPathUnits="objectBoundingBox" transform="scale(0.0013098 0.00129408)">
+        <path d="M675.68,153.72q289.68,0,579.36-.1c3.75,0,4.59.85,4.59,4.6q-.15,283.68-.09,567.36a36.54,36.54,0,0,0-3.36,2q-65.19,48.78-130.35,97.6c-38.13,28.53-76,57.42-114.54,85.38-22,16-47.15,19.68-73.24,11.76-19.12-5.81-37-15-55.31-22.88Q737.06,837.19,591.52,774.58c-28.71-12.41-46.47-34.79-50.69-65.79C533.69,656.34,528,603.7,521.69,551.14q-10.82-90.24-21.52-180.51c-1.62-13.87-4.48-27.7-3.93-41.73,1.13-28.63,13.84-51.17,36.74-68.27Q604.41,207.29,675.68,153.72Z" transform="translate(-496.17 -153.62)" fill="#64bb5f"/>
+        </clipPath>
+    </defs>
+    </svg>
+
+    <!-- white fullpage overlay for mobile menu -->
+    <div id="modal-overlay" class="hidden animate-fade-in"></div>
+    <!--NAV   -->
 </header>
   
 <!--BODY CONTAINER-->
 <main> 
-<div class="container">
-   
 
-<!--WORK SECTION-->
-    <div id="work" class='section js--section-work' style='display:initial;'>
-
-        <!--TITLE and DOTS DIVIDER - HIDDEN ON LARGE SCREENS-->
-        <div class="center hide-on-med-and-up"><h4><span class='mobile-title'>FULL STACK DEV</span></h4></div>
-
-        <div class='center hide-on-med-and-up'>
-            <span class="mobile-dot">&bull; &bull; &bull; </span>
-        </div>
-        
-       <h1 class='center'>WORK</h1>
-        <div class="row">
-            <div class="col s12 m6 l4">
-                <div class="rounded project-card blue-grey darken-1">
-                    <a href="https://blairdow.github.io/blair-snake/" target="_blank">
-                        <div class="project-image center">
-                            <img class='rounded-top responsive-img' src="assets/blairsnake.jpg" alt="blair snake image">
-                            <div class="hover project-techs center">
-                                HTML<span class="dot"> &bull; </span>CSS<span class="dot"> &bull; </span>JAVASCRIPT
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <p class='center'>BlairSnake</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col s12 m6 l8">
-                <div class="project-desc center">
-                    <p class='flow-text'>My browser based clone of the classic Nokia game, Snake, with an 8-bit spin. Ironically, cannot be played on mobile due to modern smartphones' lack of arrow keys. Please open on a laptop or desktop for the best experience!</p>
-                    <p class='built-with flow-text'>Built with HTML/CSS, HTML Canvas animation and JS/jQuery. I created the 8-bit snake gif and 8-bit food images with Photoshop.</p>
-                    <p class='github-block'>
-                      <a href="https://github.com/blairdow/blair-snake" target="_blank"><i class="ion-social-github-outline github-icon"></i>
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12 m6 l4">
-                <div class="rounded project-card blue-grey darken-1">
-                        <div class="project-image center">
-                            <img class='rounded-top responsive-img' src="assets/music_alert.jpg" alt="music alert image">
-                            <div class="hover project-techs center">
-                                RUBY ON RAILS<span class="dot"> &bull; </span>ERB
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <p class='center'>Music Alert</p>
-                        </div>
-                </div>
-            </div>
-            <div class="col s12 m6 l8">
-                <div class="project-desc center">
-                    <p class='flow-text'>Music Alert is an app that allows a user to create a list of songs, artists, and albums, and then sends a daily email with a reminder to listen to a random selection from their list. Perfect for those who keep forgetting to check out that new artist, or listen to that new album on the way home from work!</p>
-                    <p class='built-with flow-text'>Built with Ruby on Rails on a PostgreSQL database, and ERB/Bootstrap/CSS frontend. Ruby Action Mailer and Cron task were used to automate emails.</p>
-                    <p>
-                        <a href="https://github.com/blairdow/music-alert"><i class="ion-social-github-outline github-icon"></i>
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class='row'>
-            <div class="col s12 m6 l4">
-                <div class="rounded project-card blue-grey darken-1">
-                  <a href="http://vast-citadel-23192.herokuapp.com/" target="_blank">
-                        <div class="project-image center">
-                            <img class='rounded-top responsive-img' src="assets/trebek_homepage.jpg" alt="jeopardy image">
-                            <div class="hover project-techs center">
-                                NODE.JS<span class="dot"> &bull; </span>SOCKET.IO<span class="dot"> &bull; </span>MATERIALIZE CSS
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <p class='center jeopardy'>Jeopardy with Friends - Live!</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col s12 m6 l8">
-                <div class="project-desc center">
-                    <p class='flow-text'>A chat based Jeopardy game using <a href="http://socket.io/">socket.io</a>. This was a group project, built in 1 week. I was responsible for managing version control on Git, as well as the design. I also built a large part of the game/chat logic.</p>
-                  <p class='built-with flow-text'>Built with Node.js, HTML/CSS, jQuery, Socket.io, Materialize.css, and the <a href="http://jservice.io/" target="_blank">jservice.io</a> API, which provided the Jeopardy questions.</p>
-                    <p class='github-block'>
-                      <a href="https://github.com/blairdow/jeopardy-friends" target="_blank"><i class="ion-social-github-outline github-icon"></i>
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12 m6 l4">
-                <div class="rounded project-card blue-grey darken-1">
-                  <a href="https://fluffmates.herokuapp.com/" target="_blank">
-                       <div class="project-image center">
-                            <img class='rounded-top responsive-img' src="assets/fluffmates.jpg" alt="fluffmates image">
-                            <div class="hover project-techs center">
-                                IONIC MOBILE<span class="dot"> &bull; </span>NODE.JS<span class="dot"> &bull; </span>ANGULAR
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <p class='center'>FluffMates</p>
-                        </div>
-                    </a>
-                </div>
-            </div> 
-            <div class="col s12 m6 l8">
-                <div class="project-desc center">
-                    <p class='flow-text'>An iOS mobile app using the Petfinder API to allow you to search for pets to adopt in your zip code. The idea came from a friend of mine who wanted "Postmates, but for adopting pets." Users can log in and select their three favorite pets, then click a button to have them delivered! (Next step is to hire a fleet of delivery drivers.)</p>
-                    <p class='built-with flow-text'>Built with the Ionic mobile framework, Angular, HTML/CSS, Node.js and MongoDB.</p>
-                    <div class="github-block">
-                        <div class="link-block center">
-                          <a href="https://github.com/blairdow/fluffmates" target="_blank"><i class="ion-social-github-outline github-icon"></i>
-                            <br><span>Front End</span>
-                            </a>
-                        </div>
-                        <div class="link-block center">
-                          <a href="https://github.com/blairdow/fluffmates_api" target="_blank"><i class="ion-social-github-outline github-icon"></i>
-                            <br><span>Back End</span>
-                            </a>
-                        </div>
-                    </div>    
-                </div>
-            </div>
-        </div>
-    </div> 
+  <div class="container">
+    <h1>HI THERE!<br />I'M BLAIR</h1>
+    <p class="flow-text text-white">If you're reading this, I probably applied to a position that you are looking to fill. How exciting for us to be on this journey together! (Just kidding, I'm normal.)</p> 
     
-<!--ABOUT SECTION-->
-    <div id="about" class='section js--section-about about-trigger' style='display:none;'>
-        <h1 class='center'>ABOUT</h1>
-        <div class="row">
-            <div class="col s12">
+    <p class="flow-text text-white">I'm a front-end engineer who has been working full time in the industry <span class="purple accent-4 emphasis">since 2017</span>. I have a <span class="purple accent-4 emphasis">deep love for CSS</span>, a love/hate relationship with JavaScript and it's various frameworks (don't we all?), and also know enough back-end PHP/Laravel to be only mildly dangerous to your codebase. As a <span class="purple accent-4 emphasis">former designer</span>, I love working closely with them, and am able to speak their language and understand design files in a way that eludes many other engineers out there.</p>
 
-        <!--typed headline-->
-               <div id="typed-strings" style='display:none;'>
-                    <h3>Hi there! ^1000 I’m Blair. ^2000 <br>You may be wondering how I ended up as a full stack developer… </h3>
-                </div>
-                <h3 class='center'><span id="typed" class='about-intro purple accent-4'></span></h3>
-            </div>
-        </div> 
-        <div class="row bio-buttons" style='display:none;'>
-            <div class="col s6">
-                <div class="short-bio-button card-panel rounded about-card blue-grey darken-1 center">not really, give me the tl;dr.</div>
-            </div>    
-            <div class="col s6">
-               <div class="long-bio-button card-panel rounded about-card blue-grey darken-1 center">yes! give me the long version.</div>
-            </div>    
-        </div>   
-    <!--SHORT BIO-->
-        <div class="row">
-           <div class="col s12">
-                <div id="short-bio" style='display:none;' class='center'>
-                    <p class='flow-text short-bio'>GRAPHIC DESIGN > DEV BOOTCAMP > FULL STACK DEV</p>
-                </div>
-           </div>
-        </div>
-        
-    <!--LONG BIO-->
-        <div class="row">
-            <div class="col s12">
-                <div id="long-bio" style='display:none;'>
-                    <p class='flow-text about-text'>I studied Art History and Business at UCSD, and eventually became a <span class='purple accent-4 about-link'>graphic designer and social media professional</span> in the fashion industry in DTLA. I was always interested in coding, ever since I started tinkering around with HTML and CSS back in the Myspace days. I took some Computer Science classes in college, and early last year I started teaching myself how to build websites. I focused mostly on <span class='purple accent-4 about-link'>HTML, CSS, JS/jQuery and responsive design techniques</span> , with a little bit of PHP as well.</p>
+    <p class="flow-text text-white">
+        When I'm not meticulously arranging my stylesheets, I like <span class="purple accent-4 emphasis">rock climbing</span> (indoors and out), going to shows, generally enjoying the Southern California nature and weather, and hanging out with my cat. 
+    </p>
 
-                    <p class='flow-text about-text'>Eventually, I felt that I would benefit from a more structured learning environment, and I was ready to take the leap into developing! I settled on General Assembly’s 12 week long <a href="https://generalassemb.ly/education/web-development-immersive" class='purple accent-4 about-link'>Web Development Immersive bootcamp</a>, which I completed in December 2016. We learned the full MEAN stack, and Ruby on Rails. And for my final project I taught myself the Ionic mobile framework, and built a mobile app using the PetFinder API. </p>
+    <p class="center">
+      <a href='src/assets/img/BlairDowisResume2020.pdf' class="btn-large btn-default purple accent-4"><i class="ion-ios-paper-outline material-icons left"></i>Here's My Resume</a>
+    </p>
 
-                    <p class='flow-text about-text'>Coding combines my love for good design, building things, being creative, solving problems, and drinking way too much coffee in ways I never imagined! <span class="purple accent-4 about-link">I can’t wait to find my home on a dev team near you. I’m also available for freelance or contract work remotely, or in the LA area.</span> </p>
-                </div>
-            </div>
-        </div>
+    <div class='center'>
+        <span class="dot large">&bull; &bull; &bull; </span>
     </div>
-    
+    <h1>CASE STUDY</h1>
+    <p class="flow-text text-white">In 2016, when I was just a baby engineer, I built a clone of the <span class="purple accent-4 emphasis">classic Nokia game, Snake,</span> with an 8-bit spin. I thought it would be a fun challenge to <span class="purple accent-4 emphasis">refactor</span> it, and also a good way to show off how my skills have improved in the last 8 years in the industry. My original version was pretty good for someone who was semi-new to coding, but there were definitely improvements to be made. (When are there not?)</p>
 
-<!--contact section-->
-    <div id="contact" class='section js--section-contact' style='display:none;'>
-        <h1 class='center'>CONTACT</h1>
-        <div class="row">
-            <div class="col s10 offset-s1 m5 offset-m1 l3 center contact-block">
-                <a href="mailto:blairdow@gmail.com"><i class="ion-ios-compose-outline contact-icon"></i>
-                <h4 class='contact-title'>EMAIL</h4><p class='contact-info'>blairdow@gmail.com</p></a>
-            </div>
-            <div class="col s10 offset-s1 m5 l3 center contact-block">
-                <a href="tel:1-707-337-8033"><i class="ion-iphone contact-icon"></i></a>
-                <h4 class="contact-title">PHONE</h4>
-                <p class='contact-info'>707.337.8033</p>
-            </div>
-            <div class="col s10 offset-s1 m5 offset-m1 l3 center contact-block">
-              <a href="https://github.com/blairdow" target="_blank"><i class="ion-social-github-outline contact-icon"></i>
-                <h4 class="contact-title">GITHUB</h4><p class='contact-info'>github.com/blairdow</p></a>
-            </div>
-            <div class="col s10 offset-s1 m5 l3 center contact-block">
-                <a href="https://www.linkedin.com/in/blairdow" target="_blank"><i class="ion-social-linkedin-outline contact-icon"></i>
-                <h4 class="contact-title">LINKEDIN</h4><p class='contact-info'>linkedin.com/in/blairdow</p></a>
-            </div>
-        </div>
-        <div class="row opportunities">
-            <div class="col s12 m10 offset-m1 center">
-                <p class='flow-text'>
-                    I am available for full-time work, contract positions, or freelance projects in the LA area or remotely. Also interested in any and all pet-sitting opportunities.
-                </p>
-            </div>
-            <div class="col s12 center">
-                <div class="resume">
-                    <a href='assets/BlairDowisResume2020.pdf' class="btn-large nav-button purple accent-4"><i class="ion-ios-paper-outline material-icons left"></i>View/Download my resume</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <p class="flow-text text-white">The <span class="purple accent-4 emphasis">main changes</span> were: 
+      <ul class="browser-default text-white flow-text">
+        <li class="my-10">Rewriting the project in Vanilla JS/removing jQuery</li>
+        <li class="my-10">Actually making it work on mobile (ironically my original version only worked on desktop due to it using the arrow keys)</li>
+        <li class="my-10">Adding Webpack (definitely overkill for a single page game, but good practice) </li>
+        <li class="my-10">Adding Tailwind.css (not everyone's favorite way to CSS, but for me the benefits outweigh the drawbacks)</li>
+        <li class="my-10">Adding new features to the game itself like a High Score tracker!</li>
+      </ul>
+    </p>
+
+    <p class="flow-text text-white">
+      <a href="https://blairdow.github.io/blair-snake/" target="_blank" class="link">Click here</a> to play my version of Snake now, or read on for a more detailed overview of my refactor process. 
+    </p>
+
     
 <!--SKILLS-->
   <div id="skills">
@@ -288,14 +149,12 @@
         <div class="col s12 m6">
             <h1 class='center'>SKILLS</h1>
                 <ul class='skills-list'>
-                    <li><span class="skill-title">Languages: </span>HTML, CSS/SaSS, Javascript, Ruby</li>
-                    <li><span class='skill-title'>Web App frameworks: </span>Node.js + Express, Ruby on Rails</li>
-                    <li><span class='skill-title'>Front-end techs: </span>Angular, jQuery, AJAX, Materialize.css, Bootstrap</li>
-                    <li><span class='skill-title'>Mobile: </span>Ionic (iOS/Android framework)</li>
-                    <li><span class='skill-title'>Version Control: </span>Git &amp; Github</li>
-                    <li><span class='skill-title'>Databases: </span>PostgreSQL, MongoDB</li>
-                    <li><span class='skill-title'>Workflow: </span>Agile/Scrum, Trello</li>
-                    <li><span class='skill-title'>Design: </span>Adobe Creative Suite, Wire-Framing</li>
+                    <li><span class="skill-title">Languages: </span>HTML, CSS/SaSS, Javascript/Typescript, PHP</li>
+                    <li><span class='skill-title'>Front-end: </span>Angular, Vue, React, Tailwind, Webpack, jQuery</li>
+                    <li><span class='skill-title'>Back-end: </span>Node.js + Express, Laravel</li>
+                    <li><span class='skill-title'>Databases: </span>MYSQL, PostgreSQL, MongoDB</li>
+                    <li><span class='skill-title'>Workflow: </span>Github, Bitbucket, Jira, Asana, Trello</li>
+                    <li><span class='skill-title'>Design: </span>Adobe Creative Suite, Canva, Wire-Framing</li>
                 </ul>
         </div>
         <div class="col s12 m6">
@@ -319,17 +178,10 @@
 
 
 <!--SCRIPTS-->
-    <!--JQUERY-->
-    <script
-      src="https://code.jquery.com/jquery-2.2.4.js"
-      integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-      crossorigin="anonymous"></script>
-    <!--ANIMATED TYPING-->
-    <script src="js/typed.js"></script>
-    <!--MATERIALIZE CSS  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <!--MATERIALIZE JS  -->
+    <script src="src/assets/vendor/materialize-src/js/bin/materialize.min.js"></script>
     <!--MAIN SCRIPT-->
-    <script src="js/app.js"></script>
+    <script src="src/assets/js/app.js"></script>
 
 </body>
 </html>
