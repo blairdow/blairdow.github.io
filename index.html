@@ -11,7 +11,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lato:wght@300;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lato:wght@300;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="build/css/main.css">
   
@@ -81,7 +81,7 @@
                 </div>
             </div>
             <div class="resume center">
-                <a href='src/assets/img/BlairDowisResume2020.pdf' class="btn-large btn-default purple accent-4"><i class="ion-ios-paper-outline material-icons left"></i>My Resume</a>
+                <a href='src/assets/img/BlairDowisResume2020.pdf' target="_blank" class="btn-large btn-default purple accent-4"><i class="ion-ios-paper-outline material-icons left"></i>My Resume</a>
             </div>
         </div>
     </div>
@@ -115,12 +115,13 @@
     </p>
 
     <p class="center">
-      <a href='src/assets/img/BlairDowisResume2020.pdf' class="btn-large btn-default purple accent-4"><i class="ion-ios-paper-outline material-icons left"></i>Here's My Resume</a>
+      <a href='src/assets/img/BlairDowisResume2020.pdf' target="_blank" class="btn-large btn-default purple accent-4"><i class="ion-ios-paper-outline material-icons left"></i>Here's My Resume</a>
     </p>
 
     <div class='center'>
         <span class="dot large">&bull; &bull; &bull; </span>
     </div>
+
     <h1>CASE STUDY</h1>
     <p class="flow-text text-white">In 2016, when I was just a baby engineer, I built a clone of the <span class="purple accent-4 emphasis">classic Nokia game, Snake,</span> with an 8-bit spin. I thought it would be a fun challenge to <span class="purple accent-4 emphasis">refactor</span> it, and also a good way to show off how my skills have improved in the last 8 years in the industry. My original version was pretty good for someone who was semi-new to coding, but there were definitely improvements to be made. (When are there not?)</p>
 
@@ -138,8 +139,50 @@
       <a href="https://blairdow.github.io/blair-snake/" target="_blank" class="link">Click here</a> to play my version of Snake now, or read on for a more detailed overview of my refactor process. 
     </p>
 
-    <p>screenshots and base pixel unit</p>
-    <p>61 lines of css from 139</p>
+    <div class='center'>
+        <span class="dot large">&bull; &bull; &bull; </span>
+    </div>
+
+    <p class="flow-text text-white">
+      One of the main changes involved MATH (everyone's favorite), so let's get that out of the way first. Because of the nature of Snake, the game functions on a grid. The snake is broken up into square units, which were originally hardcoded to be 5px square, and the gameboard width and height were hardcoded to be 480px by 320px (also divisible by 5). Since hardcoding pixel units is generally *frowned upon*, I updated my code to have the pixel unit stored in a variable called <code>basePixelUnit</code> with an initial size of 10px. This variable is used throughout my code to set the gameboard size on mobile, snake size, and food size, as well as in the functions tracking the snake's movement, food eating, and size increase due to food eating. The pixel unit is technically hardcoded in a variable, but now the size can be changed by updating that single variable instead of updating things throughout in the codebase. This change also enabled me to easily scale the game to fit on a smaller/mobile screen, as you can see in the <code>setCanvasSize</code> function below.
+    </p>
+    <div class="img-container">
+      <img src="./src/assets/img/screenshots/base-pixel.png" class="responsive-img" alt="screenshot of code showing basePixelUnit variable">
+      <img src="./src/assets/img/screenshots/canvas-size.png" class="responsive-img" alt="screenshot of code showing canvas size function">
+    </div>
+
+    <p class="flow-text text-white">
+      Ok enough math, let's get into the styling. By switching to SCSS and adding <a href="https://tailwindcss.com/" target="_blank" class="link">Tailwind</a>, I was able to cut my stylesheet length from 139 lines down to 61! One of the other main changes I made was making the game work on mobile/touchscreen. Because my first version of the game relied on the keyboard to play, it did not work on modern touchscreen phones. I built and styled custom onscreen arrow keys with a simulated keypress for touchscreens, which you can see below. I also added a very important <code>pause</code> button and functionality.
+    </p>
+    <div class="img-container row">
+      <img src="./src/assets/img/screenshots/keypad-styling.png" class="col m6 responsive-img" alt="screenshot of code showing CSS for custom onscreen keypad">
+      <img src="./src/assets/img/screenshots/mobile-view.png" class="col m6 responsive-img" alt="screenshot of Snake game on mobile screen">
+    </div>
+
+    <p class="flow-text text-white">
+      Another function I always wanted to add was a high score leaderboard! What good is a game if you can't keep track of your high scores? I used the browser's built in <code>localStorage</code> to store and display it onscreen. When Snake loads, it checks <code>localStorage</code> for a <code>highScores</code> key. If it exists, the game pulls in the array of high scores and displays it in the onscreen leaderboard. If there is no <code>highScores</code> key stored, it will create a new empty array that the scores will be saved to going forward. When the game ends, the <code>setHighScores</code> function checks for a duplicate score in <code>localStorage</code>. If your current game score is a unique score *and* in your top 10 scores (for example, if you scored 5 points and there is already a score of 5 in your high scores, it won't save the new one) it will get pushed into the <code>localStorage</code> array and displayed in your top 10 high scores in the leaderboard.
+    </p>
+    <div class="img-container">
+      <img src="./src/assets/img/screenshots/highscores.png" class="responsive-img" alt="screenshot of code showing high score functionality">
+    </div>
+
+    <p class="flow-text text-white">
+      To mak things easier on myself, I moved all of my resuable functions into <code>utilities.js</code>. The <code>pickFood</code> function randomly selects 1 of the 3 kinds of food to spawn. The <code>randNum</code> function is used to generate random x,y coordinates for food to spawn, while taking in a min and max (for the gameboard height/width) and taking into account the <code>basePixelUnit</code> (food can only spawn in x,y coordinates that are multiples of 10, or whatever the base unit is set to). The <code>gameReset</code> function is used to easily set and reset the starting values for the game like the snake starting location, the movement tracker, the speed the snake moves at (fps, frames per second), the starting food location, etc. There are a few other things in this file which are pretty self explanatory like <code>isMobileDevice</code>, <code>isTouchScreen</code>, <code>playSound</code>, and <code>increaseSpeed</code>. You can see the full import list in the second screenshot below. </p>
+    <div class="img-container">
+      <img src="./src/assets/img/screenshots/utilities.png" class="responsive-img" alt="screenshot of code showing utilities functions">
+      <img src="./src/assets/img/screenshots/utilities-list.png" class="responsive-img" alt="screenshot of code showing utilities functions">
+    </div>
+
+    <p class="flow-text text-white">Lastly, my favorite little bit of code is this use of recursion in the <code>randomizeFood</code> function. This function generates random x,y coordinates with the <code>randNum</code> utility function, then uses a for loop to check if the new food location is in a cell where the snake is currently located. If the food *is* located where the snake is, the <code>randomizeFood</code> function is called again recursively until a food spawn location that doesn't overlap with any of the snake's cells in the grid is selected. Now That's What I Call Recursion&#8482;!</p> 
+    <div class="img-container">
+      <img src="./src/assets/img/screenshots/foodrandomize.png" class="responsive-img" alt="screenshot of code showing randomizefood recursive function">
+    </div>
+
+    <p class="flow-text text-white">Wow! We made it. Thanks for joining me on this refactor journey. If you haven't played my version of Snake yet, <a href="https://blairdow.github.io/blair-snake/" target="_blank" class="link"></a>check it out here</a>! You can see my resume below or see my contact info by clicking the button in the top right. Looking forward to meeting you!</p>
+
+    <p class="center">
+      <a href='src/assets/img/BlairDowisResume2020.pdf' target="_blank" class="btn-large btn-default purple accent-4"><i class="ion-ios-paper-outline material-icons left"></i>Here's My Resume</a>
+    </p>
 
     
 <!--SKILLS-->
