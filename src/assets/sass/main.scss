@@ -54,6 +54,7 @@ h1, h2 {
 
 a.link {
     color: $purple;
+    font-weight: 600;
     transition: color 0.3s ease-out, font-weight .3s ease-out, background-color 0.3s ease-out;
     &:hover {
         background: #aa00ff !important;
@@ -70,6 +71,9 @@ code {
     padding: 0px 5px;
     font-size: 90%;
 }
+img.responsive-img:first-child {
+    margin-bottom: 10px;
+}
 .dot {
     color: rgba(255, 255, 255, 0.32);
     &.large {
@@ -81,6 +85,18 @@ code {
     color: $white-10;
 }
 
+.row.img-container{
+    margin-bottom: 0;
+    >.col {
+        padding: 0;
+        &:first-child {
+            padding-right: .75rem;
+        }
+        &:last-child {
+            padding-left: .75rem;
+        }
+    }
+}
 
 /*NAV BAR*/
 nav {
@@ -282,13 +298,7 @@ nav {
 /*all based on materializee css's default breakpoints*/
 /* large */
 @media only screen and (max-width : 1200px) {
-    .skills-col {
-        text-align: center;
-    }
 
-    .skills-list {
-        display: inline-block;
-    }
 }
 
 /* medium */
@@ -299,7 +309,7 @@ nav {
 /* small */
 @media only screen and (max-width : 600px) { 
     h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     nav {
@@ -309,8 +319,20 @@ nav {
             font-size: 1.5rem;
         }
     }
+    #skills h2 {
+        font-size: 2rem;
+    }
     .skills-col {
         text-align: left;
+    }
+    img.responsive-img {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .row.img-container>.col {
+        &:first-child, &:last-child {
+            padding: 0;
+        }
     }
 }
 

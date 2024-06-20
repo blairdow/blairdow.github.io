@@ -8089,6 +8089,7 @@ h1, h2 {
 
 a.link {
   color: #aa00ff;
+  font-weight: 600;
   transition: color 0.3s ease-out, font-weight 0.3s ease-out, background-color 0.3s ease-out;
 }
 a.link:hover {
@@ -8107,6 +8108,10 @@ code {
   font-size: 90%;
 }
 
+img.responsive-img:first-child {
+  margin-bottom: 10px;
+}
+
 .dot {
   color: rgba(255, 255, 255, 0.32);
 }
@@ -8116,6 +8121,19 @@ code {
 
 .mobile-dot {
   color: rgba(255, 255, 255, 0.1);
+}
+
+.row.img-container {
+  margin-bottom: 0;
+}
+.row.img-container > .col {
+  padding: 0;
+}
+.row.img-container > .col:first-child {
+  padding-right: 0.75rem;
+}
+.row.img-container > .col:last-child {
+  padding-left: 0.75rem;
 }
 
 /*NAV BAR*/
@@ -8329,19 +8347,11 @@ nav #contact-button {
 /*MEDIA QUERIES*******************************/
 /*all based on materializee css's default breakpoints*/
 /* large */
-@media only screen and (max-width: 1200px) {
-  .skills-col {
-    text-align: center;
-  }
-  .skills-list {
-    display: inline-block;
-  }
-}
 /* medium */
 /* small */
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   nav {
     height: 64px;
@@ -8350,8 +8360,18 @@ nav #contact-button {
   nav .logo {
     font-size: 1.5rem;
   }
+  #skills h2 {
+    font-size: 2rem;
+  }
   .skills-col {
     text-align: left;
+  }
+  img.responsive-img {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .row.img-container > .col:first-child, .row.img-container > .col:last-child {
+    padding: 0;
   }
 }
 
