@@ -34,14 +34,17 @@
   <div class="navbar-fixed">
     <nav class="blue-grey darken-1">
       <div class="nav-wrapper">
-        <a class='brand-logo left'><img src="src/assets/img/bd_twitter.jpg" alt="avatar" class='left img-responsive avatar'>BLAIR DOWIS<span class='title hide-on-small-only'>
+        <div class='logo'>
+          <img src="src/assets/img/bd_twitter.jpg" alt="avatar" class='img-responsive avatar'>
+          <span class="name">BLAIR DOWIS</span>
+          <span class='title hide-on-med-and-down'>
             FRONT-END ENGINEER
-        </span></a>
+          </span>
+        </div>
         
-        <!--FULL SCREEN NAV BAR-->
-        <ul class="right hide-on-med-and-down fullscreen-nav">
-          <li class='nav-item'><a id="contact-button" class="btn-default btn purple accent-4">CONTACT</a></li>
-        </ul>
+        <div>
+          <a id="contact-button" class="btn-default btn purple accent-4">CONTACT</a>
+        </div>
       </div>
     </nav>
   </div>      
@@ -144,7 +147,9 @@
     </div>
 
     <p class="flow-text text-white">
-      One of the main changes involved MATH (everyone's favorite), so let's get that out of the way first. Because of the nature of Snake, the game functions on a grid. The snake is broken up into square units, which were originally hardcoded to be 5px square, and the gameboard width and height were hardcoded to be 480px by 320px (also divisible by 5). Since hardcoding pixel units is generally *frowned upon*, I updated my code to have the pixel unit stored in a variable called <code>basePixelUnit</code> with an initial size of 10px. This variable is used throughout my code to set the gameboard size on mobile, snake size, and food size, as well as in the functions tracking the snake's movement, food eating, and size increase due to food eating. The pixel unit is technically hardcoded in a variable, but now the size can be changed by updating that single variable instead of updating things throughout in the codebase. This change also enabled me to easily scale the game to fit on a smaller/mobile screen, as you can see in the <code>setCanvasSize</code> function below.
+      One of the main changes involved MATH (everyone's favorite), so let's get that out of the way first. Because of the nature of Snake, the game functions on a grid. The snake is broken up into square units, which were originally hardcoded to be 5px square, and the gameboard width and height were hardcoded to be 480px by 320px (also divisible by 5). Since hardcoding pixel units is generally *frowned upon*, I updated my code to have the pixel unit stored in a variable called <code>basePixelUnit</code> with an initial size of 10px.</p>
+      
+      <p class="flow-text text-white">This variable is used throughout my code to set the gameboard size on mobile, snake size, and food size, as well as in the functions tracking the snake's movement, food eating, and size increase due to food eating. The pixel unit is technically hardcoded in a variable, but now the size can be changed by updating that single variable instead of updating things throughout in the codebase. This change also enabled me to easily scale the game to fit on a smaller/mobile screen, as you can see in the <code>setCanvasSize</code> function below.
     </p>
     <div class="img-container">
       <img src="./src/assets/img/screenshots/base-pixel.png" class="responsive-img" alt="screenshot of code showing basePixelUnit variable">
@@ -192,8 +197,8 @@
     </div>
 
     <div class="row">
-        <div class="col s12 m6">
-            <h1 class='center'>SKILLS</h1>
+        <div class="col m12 l6 skills-col">
+            <h2 class='center'>SKILLS</h2>
                 <ul class='skills-list'>
                     <li><span class="skill-title">Languages: </span>HTML, CSS/SaSS, Javascript/Typescript, PHP</li>
                     <li><span class='skill-title'>Front-end: </span>Angular, Vue, React, Tailwind, Webpack, jQuery</li>
@@ -203,8 +208,8 @@
                     <li><span class='skill-title'>Design: </span>Adobe Creative Suite, Canva, Wire-Framing</li>
                 </ul>
         </div>
-        <div class="col s12 m6">
-            <h1 class='center'>REFERENCES</h1>
+        <div class="col m12 l6">
+            <h2 class='center'>REFERENCES</h2>
                 <div class='refs-list'>
                     <div class='ref'>"Her background in design always shines through in her projects and influences her coding decisions in a natural, positive way."<div class='ref-name center'>- Zach Totta, Software Engineer</div></div>
                     <div class='ref'>"Blair consistently impresses me with each project she completes; they not only look amazing, but function perfectly as well. The unique ideas she presents reflect her artistic and creative character."<div class='ref-name center'>- Tin Tran, Full Stack Developer</div></div>
