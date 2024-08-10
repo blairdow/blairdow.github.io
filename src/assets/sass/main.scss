@@ -277,6 +277,11 @@ nav {
         box-shadow: 0px 0px 5px black;
     }
 }
+main .btn {
+    i {
+        display: inline-block;
+    }
+}
 
 /*SKILLS & REFERENCES*********************************/
 .skills-list, .refs-list {
@@ -319,7 +324,22 @@ nav {
             font-size: 1.5rem;
         }
     }
-    #skills h2 {
+    main {
+        .btn {
+            width: 100%;
+        }
+    }
+    #modal {
+        padding: 0;
+        right: 0;
+        .modal-content {
+            padding: 4rem;
+        }
+    }
+    .hex-hero-clip {
+        clip-path: none;
+    }
+    .skills h2 {
         font-size: 2rem;
     }
     .skills-col {
