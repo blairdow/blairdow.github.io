@@ -8364,9 +8364,6 @@ main .btn i, main .btn-large i, main .btn-small i {
   nav .logo {
     font-size: 1.5rem;
   }
-  main .btn, main .btn-large, main .btn-small {
-    width: 100%;
-  }
   #modal {
     padding: 0;
     right: 0;
@@ -8374,8 +8371,19 @@ main .btn i, main .btn-large i, main .btn-small i {
   #modal .modal-content {
     padding: 4rem;
   }
+  #modal .modal-content .grid {
+    display: block;
+  }
+  #modal .modal-content .contact-icon {
+    font-size: 2rem;
+    top: 4px;
+  }
+  #modal .modal-content .contact-info {
+    display: inline-block;
+  }
   .hex-hero-clip {
     clip-path: none;
+    border-radius: 2px;
   }
   .skills h2 {
     font-size: 2rem;

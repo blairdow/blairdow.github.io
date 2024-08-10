@@ -324,20 +324,26 @@ main .btn {
             font-size: 1.5rem;
         }
     }
-    main {
-        .btn {
-            width: 100%;
-        }
-    }
     #modal {
         padding: 0;
         right: 0;
         .modal-content {
             padding: 4rem;
+            .grid {
+                display: block;
+            }
+            .contact-icon {
+                font-size: 2rem;
+                top: 4px;
+            }
+            .contact-info {
+                display: inline-block;
+            }
         }
     }
     .hex-hero-clip {
         clip-path: none;
+        border-radius: 2px;
     }
     .skills h2 {
         font-size: 2rem;
